@@ -2,17 +2,6 @@
 Route::set('index.php', function() {
   Index::CreateView('Index');
 });
-
-Route::set('about-us', function() {
-  AboutUs::CreateView('AboutUs');
-  AboutUs::test();
-  
-});
-
-Route::set('contact-us', function() {
-  ContactUs::CreateView('ContactUs');
-});
-
 Route::set('representatives', function() {
   Representatives::CreateView('Representatives');
   Representatives::test();
@@ -24,17 +13,28 @@ Route::set('addRepresentatives', function() {
   
 });
 
-Route::set('addRepresentatives', function() {
+Route::set('updateRepresentatives', function() {
   updateRepresentatives::CreateView('updateRepresentatives');
   updateRepresentatives::test();
   
 });
 
 Route::set('deleteRepresentatives', function() {
-  updateRepresentatives::CreateView('deleteRepresentatives');
-  updateRepresentatives::test();
+  deleteRepresentatives::CreateView('deleteRepresentatives');
+  deleteRepresentatives::test();
   
 });
+
+Route::set('deleteComplete', function() {
+  deleteComplete::CreateView('deleteComplete');
+  deleteComplete::test();
+  
+});
+
+
+
+
+
 
 
 ?>
