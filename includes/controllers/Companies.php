@@ -2,13 +2,16 @@
 
 class Companies extends Controller
 {
+
     public static function searchCompanies($query)
     {
-        $result = self::query("SELECT * FROM Company where company_name like '%$query%'");
+        $db = new Database();
+        $result = $db->searchItems('company', $query, 'company_name');
         $companies = new companies();
-        $companies->printCompanies($result);
+        $companies->printResult($result);
     }
-    public static function printCompanies($result) {
+    public static function printResult($result)
+    {
         foreach ($result as $item) { ?>
             <tr>
                 <td><?php echo $item[1]; ?></td>
@@ -18,16 +21,18 @@ class Companies extends Controller
             </tr>
             <?php }
     }
-    public static function doSomething()
+    public static function onPageLoad()
     {
+        $tableName = 'company';
         if (!empty($_POST['query'])) {
             $query = $_POST['query'];
             $companies = new companies();
             $companies->searchCompanies($query);
         } else {
-            $result = self::query("SELECT * FROM company");
             $companies = new companies();
-            $companies->printCompanies($result);
+            $db = new Database();
+            $result = $db->getItems($tableName);
+            $companies->printResult($result);;
         }
     }
 }

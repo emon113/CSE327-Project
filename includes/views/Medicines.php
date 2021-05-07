@@ -177,20 +177,9 @@
             <input type="submit" class="go" value="Search" />
          </form>
       </div>
-      <div class="sortbar">
-            <form action="medicinesM.html?eid=<?= $eid; ?>" method="POST">
-         <select class="sortby" name="sortby">
-            <option value="aprice">Price (Ascending)</option>
-            <option value="dprice">Price (Descending)</option>
-            <option value="aquantity">Stock (Ascending)</option>
-            <option value="dquantity">Stock (Descending)</option>
-         </select>
-         <input type="submit" class="sortbutton" value="Sort" />
-         </form>
-      </div>
       <div class="navbar">
          <a href="homeM.html?eid=<?= $eid; ?>"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
-         <a href="medicinesM.html?eid=<?= $eid; ?>"><i class="fa fa-medkit" aria-hidden="true"></i> Medicines</a>
+         <a href="medicines"><i class="fa fa-medkit" aria-hidden="true"></i> Medicines</a>
          <a href="salesM.html?eid=<?= $eid; ?>"><i class="fa fa-money" aria-hidden="true"></i> Sales</a>
          <a href="shortageM.html?eid=<?= $eid; ?>"><i class="fa fa-archive" aria-hidden="true"></i> Shortage</a>
          <a href="updateM.html?eid=<?= $eid; ?>"><i class="fa fa-pencil" aria-hidden="true"></i> Update</a>

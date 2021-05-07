@@ -6,14 +6,17 @@ Route::set('index', function() {
 
 Route::set('medicines', function() {
     Medicines::CreateView('Medicines');
+    Medicines::onPageLoad();
 });
 
 Route::set('companies', function() {
     Companies::CreateView('Companies');
+    Companies::onPageLoad();
 });
 
 Route::set('checkout', function() {
-    checkout::CreateView('checkout');
+    Checkout::CreateView('checkout');
+    Checkout::onPageLoad();
 });
 
 ?>

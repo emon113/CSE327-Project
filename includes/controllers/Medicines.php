@@ -5,11 +5,14 @@ class Medicines extends Controller
 
     public static function searchMedicines($query, $searchby)
     {
-        $result = self::query("SELECT * FROM Medicines where $searchby like '%$query%'");
+        $db = new Database();
+        $result = $db->searchItems('medicines', $query, $searchby);
         $medicines = new medicines();
-        $medicines->printMedicines($result);
+        $medicines->printResult($result);
     }
-    public static function printMedicines($result) {
+
+    public static function printResult($result)
+    {
         foreach ($result as $item) { ?>
             <tr>
                 <td><?php echo $item[1]; ?></td>
@@ -20,19 +23,22 @@ class Medicines extends Controller
                 <td><?php echo $item[7]; ?></td>
                 <td><?php echo $item[9]; ?></td>
             </tr>
-            <?php }
+    <?php }
     }
-    public static function doSomething()
+    public static function onPageLoad()
     {
+        $tableName = 'medicines';
         if (!empty($_POST['query'])) {
             $query = $_POST['query'];
             $searchby =  $_POST['searchby'];
             $medicines = new medicines();
             $medicines->searchMedicines($query, $searchby);
         } else {
-            $result = self::query("SELECT * FROM MEDICINES");
             $medicines = new medicines();
-            $medicines->printMedicines($result);
+            $db = new Database();
+            $result = $db->getItems($tableName);
+            $medicines = new medicines();
+            $medicines->printResult($result);
         }
     }
 }
