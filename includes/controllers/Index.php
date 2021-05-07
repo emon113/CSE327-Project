@@ -10,6 +10,7 @@ class Index extends Controller{
             $result = self::query("select emp_id, username, password, job from credentials where username = '$username' and password = '$password' limit 1");
             foreach($result as $item){
                 $eid = $item[0];
+                
             }
             if(!empty($result)){
                 

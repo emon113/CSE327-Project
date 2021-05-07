@@ -5,7 +5,6 @@ class Sales extends Controller{
         foreach($result as $item)
         {?>
         <tr>
-            
             <td><?php echo $item[1]; ?></td>
             <td><?php echo $item[7] ;?></td>
             <td><?php echo $item[10] ; ?></td>

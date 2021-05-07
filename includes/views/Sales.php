@@ -219,7 +219,7 @@ table button {
         
         
         <a href="homeM.html?eid=<?= $eid; ?>"><i class="fa fa-home" aria-hidden="true"></i><span>Home</span></a>
-        <a href="medicinesM.html?eid=<?= $eid; ?>"><i class="fa fa-medkit" aria-hidden="true"></i>Medicines</a>
+        <a href="medicines?eid=<?= $eid; ?>"><i class="fa fa-medkit" aria-hidden="true"></i>Medicines</a>
         <a href="sale?eid=<?= $eid; ?>"><i class="fa fa-money" aria-hidden="true"></i> Sales</a>
         <a href="shortageM.html?eid=<?= $eid; ?>"><i class="fa fa-archive" aria-hidden="true"></i><span>Shortage</span></a> 
         <a href="update?eid=<?= $eid; ?>"><i class="fa fa-wrench" aria-hidden="true"></i><span>Update</span></a>

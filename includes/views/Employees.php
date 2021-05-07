@@ -151,21 +151,19 @@ table button {
          </form>
       </div>
       <?php
-   
-   $eid =$_GET['eid'];
- 
-   ?>
+   		$eid =$_GET['eid'];
+   		?>
       <div class="navbar">
-         
-         <a href="homeM.html?eid=<?= $eid; ?>"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
-         <a href="medicinesM?eid=<?= $eid; ?>"><i class="fa fa-medkit" aria-hidden="true"></i> Medicines</a>
-         <a href="sale?eid=<?= $eid; ?>"><i class="fa fa-money" aria-hidden="true"></i> Sales</a>
-         <a href="shortageM.html?eid=<?= $eid; ?>"><i class="fa fa-archive" aria-hidden="true"></i> Shortage</a>
-         <a href="update?eid=<?= $eid; ?>"><i class="fa fa-pencil" aria-hidden="true"></i> Update</a>
-         <a href="employees?eid=<?= $eid; ?>"><i class="fa fa-pencil" aria-hidden="true"></i> Employees</a>
-         <a href="companyM.html?eid=<?= $eid; ?>"><i class="fa fa-building" aria-hidden="true"></i> Companies</a>
-         <a href="representativesM.html?eid=<?= $eid; ?>"><i class="fa fa-users" aria-hidden="true"></i> Representatives</a>
-         <a href="login"><i class="fa fa-sign-out" aria-hidden="true"></i> Log Out</a>
+	  <a href="homeM.html?eid=<?= $eid; ?>"><i class="fa fa-home" aria-hidden="true"></i><span>Home</span></a>
+        <a href="medicines?eid=<?= $eid; ?>"><i class="fa fa-medkit" aria-hidden="true"></i>Medicines</a>
+        <a href="sale?eid=<?= $eid; ?>"><i class="fa fa-money" aria-hidden="true"></i> Sales</a>
+        <a href="shortageM.html?eid=<?= $eid; ?>"><i class="fa fa-archive" aria-hidden="true"></i><span>Shortage</span></a> 
+        <a href="update?eid=<?= $eid; ?>"><i class="fa fa-wrench" aria-hidden="true"></i><span>Update</span></a>
+        <a href="employees?eid=<?= $eid; ?>"><i class="fa fa-pencil" aria-hidden="true"></i> Employees</a>
+        <a href="companyM.html?eid=<?= $eid; ?>"><i class="fa fa-building" aria-hidden="true"></i> Companies</a>
+        <a href="representativesM.html?eid=<?= $eid; ?>"><i class="fa fa-users" aria-hidden="true"></i> Representatives</a>
+        <a href="login"><i class="fa fa-arrow-left" aria-hidden="true"></i><span>Log Out</span></a>
+		 <a href="cart?eid=<?= $eid; ?>"><i class="fa fa-sign-out" aria-hidden="true"></i>Cart</a>
       </div>
       
      
