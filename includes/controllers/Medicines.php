@@ -17,8 +17,8 @@ class Medicines extends Controller
                 <td><?php echo $item[3]; ?></td>
                 <td><?php echo $item[11]; ?></td>
                 <td><?php echo $item[5]; ?></td>
-                <td><?php echo $item[6]; ?></td>
-                <td><?php echo $item[8]; ?></td>
+                <td><?php echo $item[7]; ?></td>
+                <td><?php echo $item[9]; ?></td>
             </tr>
             <?php }
     }

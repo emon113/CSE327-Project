@@ -161,7 +161,7 @@
       margin: 0;
       }
     </style>
-      <title>Manager - Medicines</title>
+      <title>Medicines</title>
       <link rel="stylesheet" href="index.css?v=1">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
    </head>
@@ -189,7 +189,6 @@
          </form>
       </div>
       <div class="navbar">
-         <p><i class="fa fa-user-circle-o" aria-hidden="true"></i></p>
          <a href="homeM.html?eid=<?= $eid; ?>"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
          <a href="medicinesM.html?eid=<?= $eid; ?>"><i class="fa fa-medkit" aria-hidden="true"></i> Medicines</a>
          <a href="salesM.html?eid=<?= $eid; ?>"><i class="fa fa-money" aria-hidden="true"></i> Sales</a>
