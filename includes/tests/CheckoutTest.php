@@ -2,41 +2,61 @@
 
 use PHPUnit\Framework\TestCase;
 
+/**
+* @brief Test class for Checkout Functionality
+*/
 class CheckoutTest extends TestCase {
 
+    /** 
+     * @brief Checks whether the customer name is valid or not
+     * @param customerName - Name of the customer 
+     * @retval true - Customer name is valid
+     * @retval false - Customer name is invalid
+     */
     public static function isValidName($customerName) {
-        if($customerName==NULL) {
+        if ($customerName == NULL) {
             return false;
         }
-        if (!preg_match("/^[a-zA-Z-' ]*$/",$customerName)) {
+        if (!preg_match("/^[a-zA-Z-' ]*$/", $customerName)) {
             return false;
         } else {
             return true;
         }
     }
 
+    /** 
+     * @brief Checks whether the customer phone number is valid or not
+     * @param customerPhone - Phone number of the customer 
+     * @retval true - Customer phone number is valid
+     * @retval false - Customer phone number  is invalid
+     */
     public static function isValidPhone($customerPhone) {
-        if($customerPhone==NULL) {
+        if ($customerPhone == NULL) {
             return false;
         }
-        if(strlen($customerPhone) == 11 && is_numeric($customerPhone)){
+        if (strlen($customerPhone) == 11 && is_numeric($customerPhone)) {
             return true;
         } else {
             return false;
         }
     }
 
+    /** 
+     * @brief Checks whether the selected payment method is valid or not
+     * @param paymentMethod - Payment method selected by the customer 
+     * @retval true - Payment method is valid, i.e, Cash/Card
+     * @retval false - Customer phone number  is invalid
+     */
     public static function isValidPayment($paymentMethod) {
-        if($paymentMethod==NULL) {
+        if ($paymentMethod == NULL) {
             return false;
         }
-        if(strcmp(strtolower($paymentMethod), 'cash') ==0 || strcmp(strtolower($paymentMethod),'card') ==0 ){
+        if (strcmp(strtolower($paymentMethod), 'cash') == 0 || strcmp(strtolower($paymentMethod), 'card') == 0) {
             return true;
         } else {
             return false;
         }
     }
-
     public function test_isValidName_ValidName_True() {
         $this->assertEquals(
             true,
@@ -112,3 +132,4 @@ class CheckoutTest extends TestCase {
     }
 
 }
+?>

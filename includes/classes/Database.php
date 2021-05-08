@@ -31,7 +31,7 @@ class Database {
   /**
   * @brief Queries the database and selects all tuples from a table
   * @param tableName - The database table to run the query on
-  * @return result - Array consisting of the query results
+  * @retval result - Array consisting of the query results
   */
   public static function getItems($tableName) {
     $db = new Database();

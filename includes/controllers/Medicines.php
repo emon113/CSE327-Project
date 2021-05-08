@@ -17,7 +17,7 @@ class Medicines extends Controller {
         $medicines = new medicines();
         $medicines->printResult($result);
     }
-    
+
     /**
     * @brief Prints the result in a tabular form
     * @param result - The array to be printed
@@ -39,7 +39,7 @@ class Medicines extends Controller {
     /**
     * @brief Loads the inital medicines page
     * @brief Prints all the medicines
-    * @brief Grabs user input from the view
+    * @brief Grabs user input from the view (if any)
     */
     public static function onPageLoad() {
         $tableName = 'medicines';

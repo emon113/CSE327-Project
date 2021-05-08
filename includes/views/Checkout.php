@@ -131,6 +131,7 @@
         <a href="#"><i class="fa fa-users" aria-hidden="true"></i> Representatives</a>
         <a href="Login.html?eid=<?= $eid; ?>"><i class="fa fa-sign-out" aria-hidden="true"></i> Log Out</a>
     </div>
+
     <div class="form">
         <form action="checkout" method="post">
             <label for="customerName">Customer Name</label>
@@ -145,6 +146,7 @@
             <input type="submit" value="Confirm">
         </form>
     </div>
+    
     <table>
         <tr>
             <th>Product Name</th>

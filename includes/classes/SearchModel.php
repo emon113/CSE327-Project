@@ -11,7 +11,7 @@ class SearchModel extends Database {
     * @param tableName - The database table to run the query on
     * @param query - The keyword to search
     * @param searchby - The attribute in which the keyword will be searched
-    * @return result - Array consisting of the query results
+    * @retval result - Array consisting of the query results
     */
     public static function searchItems($tableName, $query, $searchby) {
         $result = self::query("SELECT * FROM $tableName where $searchby like '%$query%'");

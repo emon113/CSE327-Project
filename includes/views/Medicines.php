@@ -7,7 +7,6 @@
          margin: 0px;
          padding: 0px;
       }
-
       .datetime {
          position: fixed;
          bottom: 0;
@@ -20,7 +19,6 @@
          color: white;
          font-size: 17px;
       }
-
       .cart {
          position: fixed;
          top: 0;
@@ -33,7 +31,6 @@
          color: white;
          font-size: 20px;
       }
-
       .navbar {
          height: 100%;
          width: 300px;
@@ -46,7 +43,6 @@
          background-color: #0D1B2A;
          overflow-y: auto;
       }
-
       .navbar a {
          text-decoration: none;
          font-size: 25px;
@@ -57,7 +53,6 @@
          margin-bottom: 0px;
          display: block;
       }
-
       .navbar p {
          font-size: 25px;
          color: white;
@@ -67,15 +62,12 @@
          margin-left: 20px;
          margin-bottom: 0px;
       }
-
       .navbar a:hover {
          color: #778DA9;
       }
-
       .element1 {
          margin-top: 30px;
       }
-
       .topbar {
          margin-top: 25px;
          margin-left: 315px;
@@ -85,7 +77,6 @@
          align-content: center;
          justify-content: center;
       }
-
       .sortbar {
          margin-top: 25px;
          margin-left: 315px;
@@ -95,13 +86,11 @@
          align-content: center;
          justify-content: center;
       }
-
       .sortby {
          padding: 5px;
          font-size: 17px;
          margin-right: 30px;
       }
-
       .sortbutton {
          background-color: #0D1B2A;
          padding: 5px;
@@ -111,19 +100,16 @@
          border-radius: 10px;
          color: white;
       }
-
       .searchbar {
          padding: 5px;
          font-size: 17px;
          margin-right: 30px;
       }
-
       .searchby {
          padding: 5px;
          font-size: 17px;
          margin-right: 30px;
       }
-
       .go {
          background-color: #0D1B2A;
          padding: 5px;
@@ -133,7 +119,6 @@
          border-radius: 10px;
          color: white;
       }
-
       table {
          margin-top: 0px;
          margin-left: 350px;
@@ -141,17 +126,13 @@
          width: 70%;
          text-align: center;
       }
-
       td {
          border: 1px solid #ddd;
          padding: 5px;
       }
-
-
       tr:hover {
          background-color: #778DA9;
       }
-
       th {
          border: 1px solid #ddd;
          padding-top: 10px;
@@ -159,13 +140,11 @@
          background-color: #0D1B2A;
          color: white;
       }
-
       table button {
          background-color: #fff;
          border: none;
          padding: 2px;
       }
-
       .quantity {
          padding: 1px;
          margin: 0;
@@ -175,7 +154,6 @@
    <link rel="stylesheet" href="index.css?v=1">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-
 <body>
    <div class="topbar">
       <form action="medicines" method="post">
@@ -203,7 +181,6 @@
       <a href="cartM.html?eid=<?= $eid; ?>"><button class="cart">Cart</button></a>
    </div>
    <div class="datetime">
-
    <span id='ct'></span>
    </div>
    <table>
@@ -218,7 +195,6 @@
          <th>Quantity</th>
          <th>Add</th>
       </tr>
-
       <div id="MyClockDisplay" class="datetime" onload="showTime()"></div>
       <script>
          function showTime() {
@@ -247,9 +223,7 @@
             document.getElementById("MyClockDisplay").textContent = today + ' ' + time;
             setTimeout(showTime, 1000);
          }
-
          showTime();
       </script>
 </body>
-
 </html>

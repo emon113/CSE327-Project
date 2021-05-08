@@ -33,5 +33,4 @@ class CheckoutModel extends Database {
         self::query("delete from cart where emp_id = '$eid'");
       }
 }
-
 ?>
