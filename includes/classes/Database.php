@@ -2,7 +2,6 @@
 
 /**
 * @brief Model class to communicate with the database
-* @brief All database queries are run here
 */
 
 class Database {
@@ -28,7 +27,6 @@ class Database {
     $data = $stmt->fetchAll();
     return $data;
   }
-
 
   /**
   * @brief Queries the database and selects all tuples from a table

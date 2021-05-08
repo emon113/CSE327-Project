@@ -10,12 +10,7 @@ class Companies extends Controller {
     * @brief Searches the companies and displays the result
     * @param query - The keyword to search 
     */
-    /*public static function searchCompanies($query) {
-        $db = new Database();
-        $result = $db->searchItems('company', $query, 'company_name');
-        $companies = new companies();
-        $companies->printResult($result);
-    }*/
+    
     public static function searchCompanies($query) {
         $searchModel = new SearchModel();
         $result = $searchModel->searchItems('company', $query, 'company_name');

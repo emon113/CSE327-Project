@@ -17,7 +17,6 @@ class CheckoutModel extends Database {
     * @param eid - Employee who is performing the sales
     */
     public static function confirmCheckout($customerName, $customerPhone, $paymentMethod, $eid) {
-        $db = new Database();
         $cartData = self::query("SELECT * FROM cart where emp_id = '$eid'");
         $totalPrice = 0;
         foreach ($cartData as $item) {

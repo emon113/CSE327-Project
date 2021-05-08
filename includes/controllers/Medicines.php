@@ -11,20 +11,13 @@ class Medicines extends Controller {
     * @param query - The keyword to search in Medicines
     * @param searchby - The attribute of Medicines to search in, like companyName, generic etc.
     */
-
-    /*public static function searchMedicines($query, $searchby) {
-        $db = new Database();
-        $result = $db->searchItems('medicines', $query, $searchby);
-        $medicines = new medicines();
-        $medicines->printResult($result);
-    }*/
-
     public static function searchMedicines($query, $searchby) {
         $searchModel = new searchModel();
         $result = $searchModel->searchItems('medicines', $query, $searchby);
         $medicines = new medicines();
         $medicines->printResult($result);
     }
+    
     /**
     * @brief Prints the result in a tabular form
     * @param result - The array to be printed
