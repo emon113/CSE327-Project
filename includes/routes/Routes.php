@@ -1,40 +1,39 @@
 <?php
 Route::set('index.php', function() {
-  Index::CreateView('Index');
+  Index::createView('Index');
 });
 Route::set('representatives', function() {
-  Representatives::CreateView('Representatives');
-  Representatives::test();
+  Representatives::createView('Representatives');
+  Representatives::run();
   
 });
 Route::set('addRepresentatives', function() {
-  addRepresentatives::CreateView('addRepresentatives');
-  addRepresentatives::test();
+  AddRepresentatives::createView('AddRepresentatives');
+  AddRepresentatives::test();
   
 });
 
 Route::set('updateRepresentatives', function() {
-  updateRepresentatives::CreateView('updateRepresentatives');
-  updateRepresentatives::test();
+  UpdateRepresentatives::createView('UpdateRepresentatives');
+  UpdateRepresentatives::test();
   
 });
 
 Route::set('deleteRepresentatives', function() {
-  deleteRepresentatives::CreateView('deleteRepresentatives');
-  deleteRepresentatives::test();
+  DeleteRepresentatives::createView('DeleteRepresentatives');
+  DeleteRepresentatives::test();
   
 });
 
 Route::set('deleteComplete', function() {
-  deleteComplete::CreateView('deleteComplete');
-  deleteComplete::test();
+  DeleteComplete::test();
   
 });
 
-
-
-
-
+Route::set('updateComplete', function() {
+  UpdateComplete::test();
+  
+});
 
 
 ?>

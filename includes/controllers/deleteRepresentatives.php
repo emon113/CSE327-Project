@@ -1,5 +1,5 @@
 <?php 
-class deleteRepresentatives extends Controller{
+class DeleteRepresentatives extends Controller{
     public static function test(){
 
         
