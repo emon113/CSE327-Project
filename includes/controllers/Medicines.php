@@ -1,18 +1,35 @@
 <?php
 
-class Medicines extends Controller
-{
+/**
+* @brief Controller for the Medicines page
+*/
 
-    public static function searchMedicines($query, $searchby)
-    {
+class Medicines extends Controller {
+
+    /**
+    * @brief Searches the medicines and displays the result
+    * @param query - The keyword to search in Medicines
+    * @param searchby - The attribute of Medicines to search in, like companyName, generic etc.
+    */
+
+    /*public static function searchMedicines($query, $searchby) {
         $db = new Database();
         $result = $db->searchItems('medicines', $query, $searchby);
         $medicines = new medicines();
         $medicines->printResult($result);
-    }
+    }*/
 
-    public static function printResult($result)
-    {
+    public static function searchMedicines($query, $searchby) {
+        $searchModel = new searchModel();
+        $result = $searchModel->searchItems('medicines', $query, $searchby);
+        $medicines = new medicines();
+        $medicines->printResult($result);
+    }
+    /**
+    * @brief Prints the result in a tabular form
+    * @param result - The array to be printed
+    */
+    public static function printResult($result) {
         foreach ($result as $item) { ?>
             <tr>
                 <td><?php echo $item[1]; ?></td>
@@ -23,10 +40,15 @@ class Medicines extends Controller
                 <td><?php echo $item[7]; ?></td>
                 <td><?php echo $item[9]; ?></td>
             </tr>
-    <?php }
+<?php }
     }
-    public static function onPageLoad()
-    {
+
+    /**
+    * @brief Loads the inital medicines page
+    * @brief Prints all the medicines
+    * @brief Grabs user input from the view
+    */
+    public static function onPageLoad() {
         $tableName = 'medicines';
         if (!empty($_POST['query'])) {
             $query = $_POST['query'];
