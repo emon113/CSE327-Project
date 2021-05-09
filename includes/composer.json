@@ -1,11 +1,10 @@
 {
-
-    "require-dev": {
-        "phpunit/phpunit": "^8"
-    },
     "autoload": {
-        "psr-4":{
-            "Src\\": "src"
-        }
+        "classmap": [
+            "controllers/"
+        ]
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9"
     }
 }
