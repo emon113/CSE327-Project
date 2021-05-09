@@ -7,11 +7,11 @@
 class Checkout extends Controller {
 
     /** 
-     * @brief Checks whether the customer name is valid or not
-     * @param customerName - Name of the customer 
-     * @retval true - Customer name is valid
-     * @retval false - Customer name is invalid
-     */
+    * @brief Checks whether the customer name is valid or not
+    * @param customerName - Name of the customer 
+    * @retval true - Customer name is valid
+    * @retval false - Customer name is invalid
+    */
     public static function isValidName($customerName) {
         if ($customerName == NULL) {
             return false;
@@ -24,11 +24,11 @@ class Checkout extends Controller {
     }
 
     /** 
-     * @brief Checks whether the customer phone number is valid or not
-     * @param customerPhone - Phone number of the customer 
-     * @retval true - Customer phone number is valid
-     * @retval false - Customer phone number is invalid
-     */
+    * @brief Checks whether the customer phone number is valid or not
+    * @param customerPhone - Phone number of the customer 
+    * @retval true - Customer phone number is valid
+    * @retval false - Customer phone number  is invalid
+    */
     public static function isValidPhone($customerPhone) {
         if ($customerPhone == NULL) {
             return false;
@@ -41,11 +41,11 @@ class Checkout extends Controller {
     }
 
     /** 
-     * @brief Checks whether the selected payment method is valid or not
-     * @param paymentMethod - Payment method selected by the customer 
-     * @retval true - Payment method is valid, i.e, Cash/Card
-     * @retval false - Payment method is invalid
-     */
+    * @brief Checks whether the selected payment method is valid or not
+    * @param paymentMethod - Payment method selected by the customer 
+    * @retval true - Payment method is valid, i.e, Cash/Card
+    * @retval false - Customer phone number  is invalid
+    */
     public static function isValidPayment($paymentMethod) {
         if ($paymentMethod == NULL) {
             return false;
