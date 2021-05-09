@@ -48,16 +48,16 @@
 		}
 
 		.navbar a {
-         text-decoration: none;
-         font-size: 25px;
-         color: white;
-         padding: 10px;
-         margin-left: 20px;
-         height: 10vh;
-         width: 100%;
-         margin-top: 20px;
-         display: block;
-      	}
+		 text-decoration: none;
+		 font-size: 25px;
+		 color: white;
+		 padding: 10px;
+		 margin-left: 20px;
+		 height: 10vh;
+		 width: 100%;
+		 margin-top: 20px;
+		 display: block;
+		}
 
 		.navbar p {
 			font-size: 25px;
