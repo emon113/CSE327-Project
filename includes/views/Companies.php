@@ -48,15 +48,15 @@
 		}
 
 		.navbar a {
-		 text-decoration: none;
-		 font-size: 25px;
-		 color: white;
-		 padding: 10px;
-		 margin-left: 20px;
-		 height: 10vh;
-		 width: 100%;
-		 margin-top: 20px;
-		 display: block;
+			 text-decoration: none;
+			 font-size: 25px;
+			 color: white;
+			 padding: 10px;
+			 margin-left: 20px;
+			 height: 10vh;
+			 width: 100%;
+			 margin-top: 20px;
+			 display: block;
 		}
 
 		.navbar p {
@@ -194,7 +194,7 @@
 		<a href="companies?eid=<?= $eid; ?>"><i class="fa fa-building" aria-hidden="true"></i> Companies</a>
 		<a href="representatives?eid=<?= $eid; ?>"><i class="fa fa-users" aria-hidden="true"></i> Representatives</a>
 		<a href="Index.php"><i class="fa fa-sign-out" aria-hidden="true"></i> Log Out</a>
-    </div>
+    	</div>
 	<div class="datetime">
 
 		<span id='ct'></span>
