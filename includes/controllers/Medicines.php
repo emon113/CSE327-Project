@@ -23,6 +23,7 @@ class Medicines extends Controller {
     * @param result - The array to be printed
     */
     public static function printResult($result) {
+        $eid = 0;
         foreach ($result as $item) { ?>
             <tr>
                 <td><?php echo $item[1]; ?></td>
@@ -32,7 +33,12 @@ class Medicines extends Controller {
                 <td><?php echo $item[5]; ?></td>
                 <td><?php echo $item[7]; ?></td>
                 <td><?php echo $item[9]; ?></td>
+                <form action="addtocart?eid=<?php echo $eid;?> &mid=<?php echo $item[0]; ?>" method="POST">
+                    <td><input type="number" min ="0" class="quantity" name="quantity"; required></td>
+                    <td><button type="submit">++</button> </td>
+                </form>
             </tr>
+
 <?php   }
     }
 
