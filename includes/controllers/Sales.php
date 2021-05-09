@@ -1,7 +1,15 @@
 <?php 
+    /**
+    * @brief Sales class. Do stuffs to print the sales information and it extebds to Controller class.
+    */
 class Sales extends Controller{
+    /**
+    * @brief A page with all the information related to sale.
+    * @param No parameter
+    * @return Prints the sales information in a tabular form.
+    */
     public static function sale(){
-        $result = self::query("SELECT * from orderitem o, medicines m, employees e where o.medicine_id = m.medicine_id and e.emp_id=o.emp_id and e.emp_id=o.emp_id");
+        $result = self::query("SELECT * from orderitem o, medicines m, employees e where o.medicine_id = m.medicine_id and e.emp_id=o.emp_id and e.emp_id=o.emp_id"); /**< result - Result retrived from database */
         foreach($result as $item)
         {?>
         <tr>

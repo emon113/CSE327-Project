@@ -1,7 +1,15 @@
 <?php 
+    /**
+    * @brief Update class. Do stuffs to print the medicine information and it extebds to Controller class.
+    */
 class Update extends Controller{
+    /**
+    * @brief A page with all the information of medicine with update and delete button.
+    * @param No parameter
+    * @return Prints the medicines information in a tabular form.
+    */
     public static function updateM(){
-        $result = self::query("select * from medicines");
+        $result = self::query("select * from medicines"); /**< result - Result retrived from database */
         foreach($result as $item)
         {?>
         <tr>

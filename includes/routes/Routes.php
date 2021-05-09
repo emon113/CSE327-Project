@@ -6,7 +6,7 @@ Route::set('index.php',function(){
 
 Route::set('employees',function(){
         Employees::CreateView('Employees');
-        Employees::test();
+        Employees::employee();
 });
 
 Route::set('auth',function(){

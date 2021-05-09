@@ -1,4 +1,7 @@
 <?php
+    /**
+    * @brief A class that handles all the routes of this project .
+    */
 class Route {
     public static $validRoutes = array();
     public static function set($route, $function){
