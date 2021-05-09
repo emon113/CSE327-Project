@@ -20,7 +20,12 @@ class Database {
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     return $pdo;
   }
-
+  
+  /**
+  * @brief Database queries run through this
+  * @param query - The sql query.
+  * @retval result - Results of the query if any.
+  */
   public static function query($query, $params = array()) {
     $stmt = self::con()->prepare($query);
     $stmt->execute($params);
