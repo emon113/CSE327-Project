@@ -1,1 +1,0 @@
-C:30:"PHPUnit\Runner\TestResultCache":252:{a:2:{s:7:"defects";a:0:{}s:5:"times";a:3:{s:52:"AddToCartTest::testcheckifTheQuantityIsAvailabeOrNot";d:0.005;s:58:"AddToCartTest::test_if_The_Medicine_IsAlready_Added_Or_Not";d:0;s:58:"AddToCartTest::test_find_new_Quantity_and_its_Validity_int";d:0;}}}
