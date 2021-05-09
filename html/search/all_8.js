@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['test_5fsalesanalysis_5fcal_5fint_18',['test_SalesAnalysis_cal_int',['../classtest___sales_analysis__cal__int.html',1,'']]]
+  ['query_30',['query',['../class_database.html#a2c8b796a34fc476ba90cd24b736c1cad',1,'Database']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['fetchdata_40',['fetchData',['../class_crud_model.html#a63cf198363474d6fc4b9a625c846241f',1,'CrudModel']]]
+  ['deletedata_80',['deleteData',['../class_crud_model.html#abddae72df43d998422f627f0ce115028',1,'CrudModel']]]
 ];
