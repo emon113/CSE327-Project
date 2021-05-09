@@ -209,7 +209,7 @@
 
 <body>
 
-	<div class="navbar">
+<div class="navbar">
 		<a href="home"><i class="fa fa-fw fa-home"></i>Home</a>
 		<a href="medicines"><i class="fa fa-medkit"></i> Medicines </a>
 		<a href="sales"><i class="fa fa-money"></i> Sales</a>

@@ -1,0 +1,123 @@
+All notable changes in {\ttfamily sebastianbergmann/environment} are documented in this file using the {\texttt{ Keep a CHANGELOG}} principles.\doxysection{$<$a href=\char`\"{}https\+://github.\+com/sebastianbergmann/environment/compare/5.\+1.\+2...\+5.\+1.\+3\char`\"{}$>$5.\+1.\+3$<$/a$>$ -\/ 2020-\/09-\/28}\label{md_includes__unit_test_vendor_sebastian_environment__change_log_autotoc_md387}
+\doxysubsection{Changed}\label{md_includes__unit_test_vendor_sebastian_environment__change_log_autotoc_md388}
+
+\begin{DoxyItemize}
+\item Changed PHP version constraint in {\ttfamily composer.\+json} from {\ttfamily $^\wedge$7.3 $\vert$$\vert$ $^\wedge$8.0} to {\ttfamily $>$=7.\+3}
+\end{DoxyItemize}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/sebastianbergmann/environment/compare/5.\+1.\+1...\+5.\+1.\+2\char`\"{}$>$5.\+1.\+2$<$/a$>$ -\/ 2020-\/06-\/26}\label{md_includes__unit_test_vendor_sebastian_environment__change_log_autotoc_md389}
+\doxysubsection{Added}\label{md_includes__unit_test_vendor_sebastian_environment__change_log_autotoc_md390}
+
+\begin{DoxyItemize}
+\item This component is now supported on PHP 8
+\end{DoxyItemize}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/sebastianbergmann/environment/compare/5.\+1.\+0...\+5.\+1.\+1\char`\"{}$>$5.\+1.\+1$<$/a$>$ -\/ 2020-\/06-\/15}\label{md_includes__unit_test_vendor_sebastian_environment__change_log_autotoc_md391}
+\doxysubsection{Changed}\label{md_includes__unit_test_vendor_sebastian_environment__change_log_autotoc_md392}
+
+\begin{DoxyItemize}
+\item Tests etc. are now ignored for archive exports
+\end{DoxyItemize}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/sebastianbergmann/environment/compare/5.\+0.\+2...\+5.\+1.\+0\char`\"{}$>$5.\+1.\+0$<$/a$>$ -\/ 2020-\/04-\/14}\label{md_includes__unit_test_vendor_sebastian_environment__change_log_autotoc_md393}
+\doxysubsection{Added}\label{md_includes__unit_test_vendor_sebastian_environment__change_log_autotoc_md394}
+
+\begin{DoxyItemize}
+\item {\ttfamily Runtime\+::performs\+Just\+In\+Time\+Compilation()} returns {\ttfamily true} if PHP 8\textquotesingle{}s JIT is active, {\ttfamily false} otherwise
+\end{DoxyItemize}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/sebastianbergmann/environment/compare/5.\+0.\+1...\+5.\+0.\+2\char`\"{}$>$5.\+0.\+2$<$/a$>$ -\/ 2020-\/03-\/31}\label{md_includes__unit_test_vendor_sebastian_environment__change_log_autotoc_md395}
+\doxysubsection{Fixed}\label{md_includes__unit_test_vendor_sebastian_environment__change_log_autotoc_md396}
+
+\begin{DoxyItemize}
+\item {\texttt{ \#55}}\+: {\ttfamily stty} command is executed even if no tty is available
+\end{DoxyItemize}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/sebastianbergmann/environment/compare/5.\+0.\+0...\+5.\+0.\+1\char`\"{}$>$5.\+0.\+1$<$/a$>$ -\/ 2020-\/02-\/19}\label{md_includes__unit_test_vendor_sebastian_environment__change_log_autotoc_md397}
+\doxysubsection{Changed}\label{md_includes__unit_test_vendor_sebastian_environment__change_log_autotoc_md398}
+
+\begin{DoxyItemize}
+\item {\ttfamily Runtime\+::get\+Name\+With\+Version\+And\+Code\+Coverage\+Driver()} now prioritizes PCOV over Xdebug when both extensions are loaded (just like php-\/code-\/coverage does)
+\end{DoxyItemize}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/sebastianbergmann/environment/compare/4.\+2.\+3...\+5.\+0.\+0\char`\"{}$>$5.\+0.\+0$<$/a$>$ -\/ 2020-\/02-\/07}\label{md_includes__unit_test_vendor_sebastian_environment__change_log_autotoc_md399}
+\doxysubsection{Removed}\label{md_includes__unit_test_vendor_sebastian_environment__change_log_autotoc_md400}
+
+\begin{DoxyItemize}
+\item This component is no longer supported on PHP 7.\+1 and PHP 7.\+2
+\end{DoxyItemize}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/sebastianbergmann/environment/compare/4.\+2.\+2...\+4.\+2.\+3\char`\"{}$>$4.\+2.\+3$<$/a$>$ -\/ 2019-\/11-\/20}\label{md_includes__unit_test_vendor_sebastian_environment__change_log_autotoc_md401}
+\doxysubsection{Changed}\label{md_includes__unit_test_vendor_sebastian_environment__change_log_autotoc_md402}
+
+\begin{DoxyItemize}
+\item {\texttt{ \#50}}\+: Windows improvements to console capabilities
+\end{DoxyItemize}\doxysubsection{Fixed}\label{md_includes__unit_test_vendor_sebastian_environment__change_log_autotoc_md403}
+
+\begin{DoxyItemize}
+\item {\texttt{ \#49}}\+: Detection how Op\+Cache handles docblocks does not work correctly when PHPDBG is used
+\end{DoxyItemize}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/sebastianbergmann/environment/compare/4.\+2.\+1...\+4.\+2.\+2\char`\"{}$>$4.\+2.\+2$<$/a$>$ -\/ 2019-\/05-\/05}\label{md_includes__unit_test_vendor_sebastian_environment__change_log_autotoc_md404}
+\doxysubsection{Fixed}\label{md_includes__unit_test_vendor_sebastian_environment__change_log_autotoc_md405}
+
+\begin{DoxyItemize}
+\item {\texttt{ \#44}}\+: {\ttfamily Type\+Error} in {\ttfamily Console\+::get\+Number\+Of\+Columns\+Interactive()}
+\end{DoxyItemize}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/sebastianbergmann/environment/compare/4.\+2.\+0...\+4.\+2.\+1\char`\"{}$>$4.\+2.\+1$<$/a$>$ -\/ 2019-\/04-\/25}\label{md_includes__unit_test_vendor_sebastian_environment__change_log_autotoc_md406}
+\doxysubsection{Fixed}\label{md_includes__unit_test_vendor_sebastian_environment__change_log_autotoc_md407}
+
+\begin{DoxyItemize}
+\item Fixed an issue in {\ttfamily Runtime\+::get\+Current\+Settings()}
+\end{DoxyItemize}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/sebastianbergmann/environment/compare/4.\+1.\+0...\+4.\+2.\+0\char`\"{}$>$4.\+2.\+0$<$/a$>$ -\/ 2019-\/04-\/25}\label{md_includes__unit_test_vendor_sebastian_environment__change_log_autotoc_md408}
+\doxysubsection{Added}\label{md_includes__unit_test_vendor_sebastian_environment__change_log_autotoc_md409}
+
+\begin{DoxyItemize}
+\item {\texttt{ \#36}}\+: {\ttfamily Runtime\+::get\+Current\+Settings()}
+\end{DoxyItemize}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/sebastianbergmann/environment/compare/4.\+0.\+2...\+4.\+1.\+0\char`\"{}$>$4.\+1.\+0$<$/a$>$ -\/ 2019-\/02-\/01}\label{md_includes__unit_test_vendor_sebastian_environment__change_log_autotoc_md410}
+\doxysubsection{Added}\label{md_includes__unit_test_vendor_sebastian_environment__change_log_autotoc_md411}
+
+\begin{DoxyItemize}
+\item Implemented {\ttfamily Runtime\+::get\+Name\+With\+Version\+And\+Code\+Coverage\+Driver()} method
+\item {\texttt{ \#34}}\+: Support for PCOV extension
+\end{DoxyItemize}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/sebastianbergmann/environment/compare/4.\+0.\+1...\+4.\+0.\+2\char`\"{}$>$4.\+0.\+2$<$/a$>$ -\/ 2019-\/01-\/28}\label{md_includes__unit_test_vendor_sebastian_environment__change_log_autotoc_md412}
+\doxysubsection{Fixed}\label{md_includes__unit_test_vendor_sebastian_environment__change_log_autotoc_md413}
+
+\begin{DoxyItemize}
+\item {\texttt{ \#33}}\+: {\ttfamily Runtime\+::discards\+Comments()} returns true too eagerly
+\end{DoxyItemize}\doxysubsection{Removed}\label{md_includes__unit_test_vendor_sebastian_environment__change_log_autotoc_md414}
+
+\begin{DoxyItemize}
+\item Removed support for Zend Optimizer+ in {\ttfamily Runtime\+::discards\+Comments()}
+\end{DoxyItemize}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/sebastianbergmann/environment/compare/66691f8e2dc4641909166b275a9a4f45c0e89092...\+4.\+0.\+1\char`\"{}$>$4.\+0.\+1$<$/a$>$ -\/ 2018-\/11-\/25}\label{md_includes__unit_test_vendor_sebastian_environment__change_log_autotoc_md415}
+\doxysubsection{Fixed}\label{md_includes__unit_test_vendor_sebastian_environment__change_log_autotoc_md416}
+
+\begin{DoxyItemize}
+\item {\texttt{ \#31}}\+: Regressions in {\ttfamily Console} class
+\end{DoxyItemize}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/sebastianbergmann/environment/compare/3.\+1.\+0...\+66691f8e2dc4641909166b275a9a4f45c0e89092\char`\"{}$>$4.\+0.\+0$<$/a$>$ -\/ 2018-\/10-\/23 [\+YANKED]}\label{md_includes__unit_test_vendor_sebastian_environment__change_log_autotoc_md417}
+\doxysubsection{Fixed}\label{md_includes__unit_test_vendor_sebastian_environment__change_log_autotoc_md418}
+
+\begin{DoxyItemize}
+\item {\texttt{ \#25}}\+: {\ttfamily Console\+::has\+Color\+Support()} does not work on Windows
+\end{DoxyItemize}\doxysubsection{Removed}\label{md_includes__unit_test_vendor_sebastian_environment__change_log_autotoc_md419}
+
+\begin{DoxyItemize}
+\item This component is no longer supported on PHP 7.\+0
+\end{DoxyItemize}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/sebastianbergmann/environment/compare/3.\+0...\+3.\+1.\+0\char`\"{}$>$3.\+1.\+0$<$/a$>$ -\/ 2017-\/07-\/01}\label{md_includes__unit_test_vendor_sebastian_environment__change_log_autotoc_md420}
+\doxysubsection{Added}\label{md_includes__unit_test_vendor_sebastian_environment__change_log_autotoc_md421}
+
+\begin{DoxyItemize}
+\item {\texttt{ \#21}}\+: Equivalent of {\ttfamily PHP\+\_\+\+OS\+\_\+\+FAMILY} (for PHP $<$ 7.\+2)
+\end{DoxyItemize}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/sebastianbergmann/environment/compare/3.\+0.\+3...\+3.\+0.\+4\char`\"{}$>$3.\+0.\+4$<$/a$>$ -\/ 2017-\/06-\/20}\label{md_includes__unit_test_vendor_sebastian_environment__change_log_autotoc_md422}
+\doxysubsection{Fixed}\label{md_includes__unit_test_vendor_sebastian_environment__change_log_autotoc_md423}
+
+\begin{DoxyItemize}
+\item {\texttt{ \#20}}\+: PHP 7 mode of HHVM not forced
+\end{DoxyItemize}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/sebastianbergmann/environment/compare/3.\+0.\+2...\+3.\+0.\+3\char`\"{}$>$3.\+0.\+3$<$/a$>$ -\/ 2017-\/05-\/18}\label{md_includes__unit_test_vendor_sebastian_environment__change_log_autotoc_md424}
+\doxysubsection{Fixed}\label{md_includes__unit_test_vendor_sebastian_environment__change_log_autotoc_md425}
+
+\begin{DoxyItemize}
+\item {\texttt{ \#18}}\+: {\ttfamily Uncaught Type\+Error\+: preg\+\_\+match() expects parameter 2 to be string, null given}
+\end{DoxyItemize}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/sebastianbergmann/environment/compare/3.\+0.\+1...\+3.\+0.\+2\char`\"{}$>$3.\+0.\+2$<$/a$>$ -\/ 2017-\/04-\/21}\label{md_includes__unit_test_vendor_sebastian_environment__change_log_autotoc_md426}
+\doxysubsection{Fixed}\label{md_includes__unit_test_vendor_sebastian_environment__change_log_autotoc_md427}
+
+\begin{DoxyItemize}
+\item {\texttt{ \#17}}\+: {\ttfamily Uncaught Type\+Error\+: trim() expects parameter 1 to be string, boolean given}
+\end{DoxyItemize}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/sebastianbergmann/environment/compare/3.\+0.\+0...\+3.\+0.\+1\char`\"{}$>$3.\+0.\+1$<$/a$>$ -\/ 2017-\/04-\/21}\label{md_includes__unit_test_vendor_sebastian_environment__change_log_autotoc_md428}
+\doxysubsection{Fixed}\label{md_includes__unit_test_vendor_sebastian_environment__change_log_autotoc_md429}
+
+\begin{DoxyItemize}
+\item Fixed inverted logic in {\ttfamily Runtime\+::discards\+Comments()}
+\end{DoxyItemize}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/sebastianbergmann/environment/compare/2.\+0...\+3.\+0.\+0\char`\"{}$>$3.\+0.\+0$<$/a$>$ -\/ 2017-\/04-\/21}\label{md_includes__unit_test_vendor_sebastian_environment__change_log_autotoc_md430}
+\doxysubsection{Added}\label{md_includes__unit_test_vendor_sebastian_environment__change_log_autotoc_md431}
+
+\begin{DoxyItemize}
+\item Implemented {\ttfamily Runtime\+::discards\+Comments()} for querying whether the PHP runtime discards annotations
+\end{DoxyItemize}\doxysubsection{Removed}\label{md_includes__unit_test_vendor_sebastian_environment__change_log_autotoc_md432}
+
+\begin{DoxyItemize}
+\item This component is no longer supported on PHP 5.\+6 
+\end{DoxyItemize}

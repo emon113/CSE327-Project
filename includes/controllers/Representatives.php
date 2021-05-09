@@ -1,7 +1,17 @@
 <?php 
+    /**
+    * @brief This class contains the control part of showing representatives data.
+    */
 class Representatives extends Controller{
+    /**
+    * @brief Loads all the data after View is executed
+    * @param no parameters
+    * @retval result - Data gets loaded on or from the page.
+    */
     public static function run(){
-        $result = self::query("select rep_id,concat(first_name,' ',last_name) AS fname,representatives.phone_number,company_name from representatives");
+        $db = new CrudModel();
+        
+        $result = $db->fetchData();
         foreach($result as $value){?>
         <tr>       
             <td><?php echo $value[1] ; ?></td>

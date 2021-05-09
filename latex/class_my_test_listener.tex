@@ -1,0 +1,182 @@
+\doxysection{My\+Test\+Listener Class Reference}
+\label{class_my_test_listener}\index{MyTestListener@{MyTestListener}}
+Inheritance diagram for My\+Test\+Listener\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_my_test_listener}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ add\+Error} (\textbf{ Test} \$test, \textbackslash{}Throwable \$t, float \$time)
+\item 
+\mbox{\label{class_my_test_listener_ab08386f846eb6ed94b45729c6e63d731}} 
+{\bfseries add\+Warning} (\textbf{ Test} \$test, \textbf{ Warning} \$e, float \$time)
+\item 
+\textbf{ add\+Failure} (\textbf{ Test} \$test, \textbf{ Assertion\+Failed\+Error} \$e, float \$time)
+\item 
+\textbf{ add\+Incomplete\+Test} (\textbf{ Test} \$test, \textbackslash{}Throwable \$t, float \$time)
+\item 
+\textbf{ add\+Risky\+Test} (\textbf{ Test} \$test, \textbackslash{}Throwable \$t, float \$time)
+\item 
+\textbf{ add\+Skipped\+Test} (\textbf{ Test} \$test, \textbackslash{}Throwable \$t, float \$time)
+\item 
+\textbf{ start\+Test\+Suite} (\textbf{ Test\+Suite} \$suite)
+\item 
+\textbf{ end\+Test\+Suite} (\textbf{ Test\+Suite} \$suite)
+\item 
+\textbf{ start\+Test} (\textbf{ Test} \$test)
+\item 
+\textbf{ end\+Test} (\textbf{ Test} \$test, float \$time)
+\item 
+\mbox{\label{class_my_test_listener_a2f87d52d401c2b36156ae8890878072c}} 
+{\bfseries end\+Count} ()
+\item 
+\mbox{\label{class_my_test_listener_af3b127ea2f9d87870d35af0852856ff8}} 
+{\bfseries error\+Count} ()
+\item 
+\mbox{\label{class_my_test_listener_a6678e4a6278a9f5d62d9dfca93037d21}} 
+{\bfseries failure\+Count} ()
+\item 
+\mbox{\label{class_my_test_listener_a4d7b280010e55a2e1507ee27238ae744}} 
+{\bfseries warning\+Count} ()
+\item 
+\mbox{\label{class_my_test_listener_ad4836d96a0d1241ad21da4909cc449ca}} 
+{\bfseries not\+Implemented\+Count} ()
+\item 
+\mbox{\label{class_my_test_listener_aae72562b9950775acd98b2426f3ae042}} 
+{\bfseries risky\+Count} ()
+\item 
+\mbox{\label{class_my_test_listener_ac09b71b767ee2a01c8c178f0ea0beaeb}} 
+{\bfseries skipped\+Count} ()
+\item 
+\mbox{\label{class_my_test_listener_a74813e3f4ed288c003f7a39cd5f51c8c}} 
+{\bfseries start\+Count} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{class_my_test_listener_a7783bfa29fd0837206f4300d05d899a3}} 
+\index{MyTestListener@{MyTestListener}!addError@{addError}}
+\index{addError@{addError}!MyTestListener@{MyTestListener}}
+\doxysubsubsection{addError()}
+{\footnotesize\ttfamily add\+Error (\begin{DoxyParamCaption}\item[{\textbf{ Test}}]{\$test,  }\item[{\textbackslash{}Throwable}]{\$t,  }\item[{float}]{\$time }\end{DoxyParamCaption})}
+
+An error occurred.
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\textbf{ Deprecated}]Use {\ttfamily After\+Test\+Error\+Hook\+::execute\+After\+Test\+Error} instead \end{DoxyRefDesc}
+
+
+Implements \textbf{ Test\+Listener} \doxyref{}{p.}{interface_p_h_p_unit_1_1_framework_1_1_test_listener_a7783bfa29fd0837206f4300d05d899a3}.
+
+\mbox{\label{class_my_test_listener_a1a0ec8ce0e4c3d131044f62786aeb988}} 
+\index{MyTestListener@{MyTestListener}!addFailure@{addFailure}}
+\index{addFailure@{addFailure}!MyTestListener@{MyTestListener}}
+\doxysubsubsection{addFailure()}
+{\footnotesize\ttfamily add\+Failure (\begin{DoxyParamCaption}\item[{\textbf{ Test}}]{\$test,  }\item[{\textbf{ Assertion\+Failed\+Error}}]{\$e,  }\item[{float}]{\$time }\end{DoxyParamCaption})}
+
+A failure occurred.
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\textbf{ Deprecated}]Use {\ttfamily After\+Test\+Failure\+Hook\+::execute\+After\+Test\+Failure} instead \end{DoxyRefDesc}
+
+
+Implements \textbf{ Test\+Listener} \doxyref{}{p.}{interface_p_h_p_unit_1_1_framework_1_1_test_listener_a1a0ec8ce0e4c3d131044f62786aeb988}.
+
+\mbox{\label{class_my_test_listener_a7c8952a846b1231edf8f262a2c5497c1}} 
+\index{MyTestListener@{MyTestListener}!addIncompleteTest@{addIncompleteTest}}
+\index{addIncompleteTest@{addIncompleteTest}!MyTestListener@{MyTestListener}}
+\doxysubsubsection{addIncompleteTest()}
+{\footnotesize\ttfamily add\+Incomplete\+Test (\begin{DoxyParamCaption}\item[{\textbf{ Test}}]{\$test,  }\item[{\textbackslash{}Throwable}]{\$t,  }\item[{float}]{\$time }\end{DoxyParamCaption})}
+
+Incomplete test.
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\textbf{ Deprecated}]Use {\ttfamily After\+Incomplete\+Test\+Hook\+::execute\+After\+Incomplete\+Test} instead \end{DoxyRefDesc}
+
+
+Implements \textbf{ Test\+Listener} \doxyref{}{p.}{interface_p_h_p_unit_1_1_framework_1_1_test_listener_a7c8952a846b1231edf8f262a2c5497c1}.
+
+\mbox{\label{class_my_test_listener_a2c78e4fa7a0dbdf7ac9cddd0909d1c2e}} 
+\index{MyTestListener@{MyTestListener}!addRiskyTest@{addRiskyTest}}
+\index{addRiskyTest@{addRiskyTest}!MyTestListener@{MyTestListener}}
+\doxysubsubsection{addRiskyTest()}
+{\footnotesize\ttfamily add\+Risky\+Test (\begin{DoxyParamCaption}\item[{\textbf{ Test}}]{\$test,  }\item[{\textbackslash{}Throwable}]{\$t,  }\item[{float}]{\$time }\end{DoxyParamCaption})}
+
+Risky test.
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\textbf{ Deprecated}]Use {\ttfamily After\+Risky\+Test\+Hook\+::execute\+After\+Risky\+Test} instead \end{DoxyRefDesc}
+
+
+Implements \textbf{ Test\+Listener} \doxyref{}{p.}{interface_p_h_p_unit_1_1_framework_1_1_test_listener_a2c78e4fa7a0dbdf7ac9cddd0909d1c2e}.
+
+\mbox{\label{class_my_test_listener_a19ee5bd9ad5d269b9b1e7741b6793c0e}} 
+\index{MyTestListener@{MyTestListener}!addSkippedTest@{addSkippedTest}}
+\index{addSkippedTest@{addSkippedTest}!MyTestListener@{MyTestListener}}
+\doxysubsubsection{addSkippedTest()}
+{\footnotesize\ttfamily add\+Skipped\+Test (\begin{DoxyParamCaption}\item[{\textbf{ Test}}]{\$test,  }\item[{\textbackslash{}Throwable}]{\$t,  }\item[{float}]{\$time }\end{DoxyParamCaption})}
+
+Skipped test.
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\textbf{ Deprecated}]Use {\ttfamily After\+Skipped\+Test\+Hook\+::execute\+After\+Skipped\+Test} instead \end{DoxyRefDesc}
+
+
+Implements \textbf{ Test\+Listener} \doxyref{}{p.}{interface_p_h_p_unit_1_1_framework_1_1_test_listener_a19ee5bd9ad5d269b9b1e7741b6793c0e}.
+
+\mbox{\label{class_my_test_listener_a8b5de1df4f8c5dc3948e7c86fa49df18}} 
+\index{MyTestListener@{MyTestListener}!endTest@{endTest}}
+\index{endTest@{endTest}!MyTestListener@{MyTestListener}}
+\doxysubsubsection{endTest()}
+{\footnotesize\ttfamily end\+Test (\begin{DoxyParamCaption}\item[{\textbf{ Test}}]{\$test,  }\item[{float}]{\$time }\end{DoxyParamCaption})}
+
+A test ended.
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\textbf{ Deprecated}]Use {\ttfamily After\+Test\+Hook\+::execute\+After\+Test} instead \end{DoxyRefDesc}
+
+
+Implements \textbf{ Test\+Listener} \doxyref{}{p.}{interface_p_h_p_unit_1_1_framework_1_1_test_listener_a8b5de1df4f8c5dc3948e7c86fa49df18}.
+
+\mbox{\label{class_my_test_listener_a0db232475a4d0522dffe68281ebc771d}} 
+\index{MyTestListener@{MyTestListener}!endTestSuite@{endTestSuite}}
+\index{endTestSuite@{endTestSuite}!MyTestListener@{MyTestListener}}
+\doxysubsubsection{endTestSuite()}
+{\footnotesize\ttfamily end\+Test\+Suite (\begin{DoxyParamCaption}\item[{\textbf{ Test\+Suite}}]{\$suite }\end{DoxyParamCaption})}
+
+A test suite ended. 
+
+Implements \textbf{ Test\+Listener} \doxyref{}{p.}{interface_p_h_p_unit_1_1_framework_1_1_test_listener_a0db232475a4d0522dffe68281ebc771d}.
+
+\mbox{\label{class_my_test_listener_a65233ce04e89fb4d4f13ce26f40d3951}} 
+\index{MyTestListener@{MyTestListener}!startTest@{startTest}}
+\index{startTest@{startTest}!MyTestListener@{MyTestListener}}
+\doxysubsubsection{startTest()}
+{\footnotesize\ttfamily start\+Test (\begin{DoxyParamCaption}\item[{\textbf{ Test}}]{\$test }\end{DoxyParamCaption})}
+
+A test started.
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\textbf{ Deprecated}]Use {\ttfamily Before\+Test\+Hook\+::execute\+Before\+Test} instead \end{DoxyRefDesc}
+
+
+Implements \textbf{ Test\+Listener} \doxyref{}{p.}{interface_p_h_p_unit_1_1_framework_1_1_test_listener_a65233ce04e89fb4d4f13ce26f40d3951}.
+
+\mbox{\label{class_my_test_listener_ac6fe8558620490a841f4aff01a3c870a}} 
+\index{MyTestListener@{MyTestListener}!startTestSuite@{startTestSuite}}
+\index{startTestSuite@{startTestSuite}!MyTestListener@{MyTestListener}}
+\doxysubsubsection{startTestSuite()}
+{\footnotesize\ttfamily start\+Test\+Suite (\begin{DoxyParamCaption}\item[{\textbf{ Test\+Suite}}]{\$suite }\end{DoxyParamCaption})}
+
+A test suite started. 
+
+Implements \textbf{ Test\+Listener} \doxyref{}{p.}{interface_p_h_p_unit_1_1_framework_1_1_test_listener_ac6fe8558620490a841f4aff01a3c870a}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+includes/\+Unit\+Test/vendor/phpunit/phpunit/tests/\+\_\+files/My\+Test\+Listener.\+php\end{DoxyCompactItemize}

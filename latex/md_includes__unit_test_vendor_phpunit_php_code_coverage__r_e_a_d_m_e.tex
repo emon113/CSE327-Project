@@ -1,0 +1,43 @@
+{\texttt{ }} {\texttt{ }} {\texttt{ }}
+
+Provides collection, processing, and rendering functionality for PHP code coverage information.\doxysection{Installation}\label{md_includes__unit_test_vendor_phpunit_php_code_coverage__r_e_a_d_m_e_autotoc_md159}
+You can add this library as a local, per-\/project dependency to your project using {\texttt{ Composer}}\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{composer require phpunit/php-\/code-\/coverage}
+
+\end{DoxyCode}
+
+
+If you only need this library during development, for instance to run your project\textquotesingle{}s test suite, then you should add it as a development-\/time dependency\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{composer require -\/-\/dev phpunit/php-\/code-\/coverage}
+
+\end{DoxyCode}
+\doxysection{Usage}\label{md_includes__unit_test_vendor_phpunit_php_code_coverage__r_e_a_d_m_e_autotoc_md160}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{<?php}
+\DoxyCodeLine{use SebastianBergmann\(\backslash\)CodeCoverage\(\backslash\)CodeCoverage;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\$coverage = \textcolor{keyword}{new} CodeCoverage;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\$coverage-\/>filter()-\/>addDirectoryToWhitelist(\textcolor{stringliteral}{'/path/to/src'});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\$coverage-\/>start(\textcolor{stringliteral}{'<name of test>'});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// ...}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\$coverage-\/>stop();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\$writer = new \(\backslash\)SebastianBergmann\(\backslash\)CodeCoverage\(\backslash\)Report\(\backslash\)Clover;}
+\DoxyCodeLine{\$writer-\/>process(\$coverage, \textcolor{stringliteral}{'/tmp/clover.xml'});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\$writer = new \(\backslash\)SebastianBergmann\(\backslash\)CodeCoverage\(\backslash\)Report\(\backslash\)Html\(\backslash\)Facade;}
+\DoxyCodeLine{\$writer-\/>process(\$coverage, \textcolor{stringliteral}{'/tmp/code-\/coverage-\/report'});}
+
+\end{DoxyCode}
+ 

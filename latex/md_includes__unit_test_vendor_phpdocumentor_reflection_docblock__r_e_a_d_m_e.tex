@@ -1,0 +1,53 @@
+{\texttt{ }}  {\texttt{ }} {\texttt{ }} {\texttt{ }} {\texttt{ }} {\texttt{ }}\doxysection{Reflection\+Doc\+Block}\label{md_includes__unit_test_vendor_phpdocumentor_reflection_docblock__r_e_a_d_m_e_autotoc_md48}
+\doxysubsection{Introduction}\label{md_includes__unit_test_vendor_phpdocumentor_reflection_docblock__r_e_a_d_m_e_autotoc_md49}
+The Reflection\+Doc\+Block component of php\+Documentor provides a Doc\+Block parser that is 100\% compatible with the {\texttt{ PHPDoc standard}}.
+
+With this component, a library can provide support for annotations via Doc\+Blocks or otherwise retrieve information that is embedded in a Doc\+Block.\doxysubsection{Installation}\label{md_includes__unit_test_vendor_phpdocumentor_reflection_docblock__r_e_a_d_m_e_autotoc_md50}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{composer require phpdocumentor/reflection-\/docblock}
+
+\end{DoxyCode}
+\doxysubsection{Usage}\label{md_includes__unit_test_vendor_phpdocumentor_reflection_docblock__r_e_a_d_m_e_autotoc_md51}
+In order to parse the Doc\+Block one needs a Doc\+Block\+Factory that can be instantiated using its {\ttfamily create\+Instance} factory method like this\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$factory  = \(\backslash\)phpDocumentor\(\backslash\)Reflection\(\backslash\)DocBlockFactory::createInstance();}
+
+\end{DoxyCode}
+
+
+Then we can use the {\ttfamily create} method of the factory to interpret the Doc\+Block. Please note that it is also possible to provide a class that has the {\ttfamily get\+Doc\+Comment()} method, such as an object of type {\ttfamily Reflection\+Class}, the create method will read that if it exists.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$docComment = <<<DOCCOMMENT}
+\DoxyCodeLine{DOCCOMMENT;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\$docblock = \$factory-\/>create(\$docComment);}
+
+\end{DoxyCode}
+
+
+The {\ttfamily create} method will yield an object of type {\ttfamily \textbackslash{}php\+Documentor\textbackslash{}Reflection\textbackslash{}Doc\+Block} whose methods can be queried\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{// Contains the summary for this DocBlock}}
+\DoxyCodeLine{\$summary = \$docblock-\/>getSummary();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// Contains \(\backslash\)phpDocumentor\(\backslash\)Reflection\(\backslash\)DocBlock\(\backslash\)Description object}}
+\DoxyCodeLine{\$description = \$docblock-\/>getDescription();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// You can either cast it to string}}
+\DoxyCodeLine{\$description = (string) \$docblock-\/>getDescription();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// Or use the render method to get a string representation of the Description.}}
+\DoxyCodeLine{\$description = \$docblock-\/>getDescription()-\/>render();}
+
+\end{DoxyCode}
+
+
+\begin{quote}
+For more examples it would be best to review the scripts in the {\texttt{ {\ttfamily /examples} folder}}. \end{quote}

@@ -1,0 +1,37 @@
+
+\begin{DoxyItemize}
+\item Follow the {\texttt{ Doctrine Coding Standard}}
+\item The project will follow strict {\texttt{ object calisthenics}}
+\item Any contribution must provide tests for additional introduced conditions
+\item Any un-\/confirmed issue needs a failing test case before being accepted
+\item Pull requests must be sent from a new hotfix/feature branch, not from {\ttfamily master}.
+\end{DoxyItemize}\doxysection{Installation}\label{md_includes__unit_test_vendor_doctrine_instantiator__c_o_n_t_r_i_b_u_t_i_n_g_autotoc_md1}
+To install the project and run the tests, you need to clone it first\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$ git clone git://github.com/doctrine/instantiator.git}
+
+\end{DoxyCode}
+
+
+You will then need to run a composer installation\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$ cd Instantiator}
+\DoxyCodeLine{\$ curl -\/s https://getcomposer.org/installer | php}
+\DoxyCodeLine{\$ php composer.phar update}
+
+\end{DoxyCode}
+\doxysection{Testing}\label{md_includes__unit_test_vendor_doctrine_instantiator__c_o_n_t_r_i_b_u_t_i_n_g_autotoc_md2}
+The PHPUnit version to be used is the one installed as a dev-\/ dependency via composer\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$ ./vendor/bin/phpunit}
+
+\end{DoxyCode}
+
+
+Accepted coverage for new contributions is 80\%. Any contribution not satisfying this requirement won\textquotesingle{}t be merged. 

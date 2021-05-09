@@ -1,4 +1,7 @@
 <?php
+   /**
+    * @brief This class loads the pages according to the url.
+    */
 class Route {
   public static $validRoutes = array();
   public static function set($route,$function){

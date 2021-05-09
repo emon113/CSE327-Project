@@ -1,0 +1,43 @@
+A small library for converting tokenized PHP source code into XML.
+
+{\texttt{ }} {\texttt{ }} {\texttt{ }}\doxysection{Installation}\label{md_includes__unit_test_vendor_theseer_tokenizer__r_e_a_d_m_e_autotoc_md588}
+You can add this library as a local, per-\/project dependency to your project using {\texttt{ Composer}}\+: \begin{DoxyVerb}composer require theseer/tokenizer
+\end{DoxyVerb}
+ If you only need this library during development, for instance to run your project\textquotesingle{}s test suite, then you should add it as a development-\/time dependency\+: \begin{DoxyVerb}composer require --dev theseer/tokenizer
+\end{DoxyVerb}
+ \doxysection{Usage examples}\label{md_includes__unit_test_vendor_theseer_tokenizer__r_e_a_d_m_e_autotoc_md589}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$tokenizer = \textcolor{keyword}{new} TheSeer\(\backslash\)Tokenizer\(\backslash\)Tokenizer();}
+\DoxyCodeLine{\$tokens = \$tokenizer-\/>parse(file\_get\_contents(\_\_DIR\_\_ . \textcolor{stringliteral}{'/src/XMLSerializer.php'}));}
+\DoxyCodeLine{}
+\DoxyCodeLine{\$serializer = \textcolor{keyword}{new} TheSeer\(\backslash\)Tokenizer\(\backslash\)XMLSerializer();}
+\DoxyCodeLine{\$xml = \$serializer-\/>toXML(\$tokens);}
+\DoxyCodeLine{}
+\DoxyCodeLine{echo \$xml;}
+
+\end{DoxyCode}
+
+
+The generated XML structure looks something like this\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{<?\textcolor{keyword}{xml} \textcolor{keyword}{version}=\textcolor{stringliteral}{"{}1.0"{}}?>}
+\DoxyCodeLine{<\textcolor{keywordtype}{source} \textcolor{keyword}{xmlns}=\textcolor{stringliteral}{"{}https://github.com/theseer/tokenizer"{}}>}
+\DoxyCodeLine{ <\textcolor{keywordtype}{line} \textcolor{keyword}{no}=\textcolor{stringliteral}{"{}1"{}}>}
+\DoxyCodeLine{  <\textcolor{keywordtype}{token} \textcolor{keyword}{name}=\textcolor{stringliteral}{"{}T\_OPEN\_TAG"{}}>\&\textcolor{keyword}{lt};?\textcolor{keyword}{php} </\textcolor{keywordtype}{token}>}
+\DoxyCodeLine{  <\textcolor{keywordtype}{token} \textcolor{keyword}{name}=\textcolor{stringliteral}{"{}T\_DECLARE"{}}>\textcolor{keyword}{declare}</\textcolor{keywordtype}{token}>}
+\DoxyCodeLine{  <\textcolor{keywordtype}{token} \textcolor{keyword}{name}=\textcolor{stringliteral}{"{}T\_OPEN\_BRACKET"{}}>(</\textcolor{keywordtype}{token}>}
+\DoxyCodeLine{  <\textcolor{keywordtype}{token} \textcolor{keyword}{name}=\textcolor{stringliteral}{"{}T\_STRING"{}}>\textcolor{keyword}{strict\_types}</\textcolor{keywordtype}{token}>}
+\DoxyCodeLine{  <\textcolor{keywordtype}{token} \textcolor{keyword}{name}=\textcolor{stringliteral}{"{}T\_WHITESPACE"{}}> </\textcolor{keywordtype}{token}>}
+\DoxyCodeLine{  <\textcolor{keywordtype}{token} \textcolor{keyword}{name}=\textcolor{stringliteral}{"{}T\_EQUAL"{}}>=</\textcolor{keywordtype}{token}>}
+\DoxyCodeLine{  <\textcolor{keywordtype}{token} \textcolor{keyword}{name}=\textcolor{stringliteral}{"{}T\_WHITESPACE"{}}> </\textcolor{keywordtype}{token}>}
+\DoxyCodeLine{  <\textcolor{keywordtype}{token} \textcolor{keyword}{name}=\textcolor{stringliteral}{"{}T\_LNUMBER"{}}>1</\textcolor{keywordtype}{token}>}
+\DoxyCodeLine{  <\textcolor{keywordtype}{token} \textcolor{keyword}{name}=\textcolor{stringliteral}{"{}T\_CLOSE\_BRACKET"{}}>)</\textcolor{keywordtype}{token}>}
+\DoxyCodeLine{  <\textcolor{keywordtype}{token} \textcolor{keyword}{name}=\textcolor{stringliteral}{"{}T\_SEMICOLON"{}}>;</\textcolor{keywordtype}{token}>}
+\DoxyCodeLine{ </\textcolor{keywordtype}{line}>}
+\DoxyCodeLine{</\textcolor{keywordtype}{source}>}
+
+\end{DoxyCode}
+ 

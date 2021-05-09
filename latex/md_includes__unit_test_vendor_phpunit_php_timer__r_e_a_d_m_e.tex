@@ -1,0 +1,69 @@
+{\texttt{ }} {\texttt{ }}
+
+Utility class for timing things, factored out of PHPUnit into a stand-\/alone component.\doxysection{Installation}\label{md_includes__unit_test_vendor_phpunit_php_timer__r_e_a_d_m_e_autotoc_md248}
+You can add this library as a local, per-\/project dependency to your project using {\texttt{ Composer}}\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{composer require phpunit/php-\/timer}
+
+\end{DoxyCode}
+
+
+If you only need this library during development, for instance to run your project\textquotesingle{}s test suite, then you should add it as a development-\/time dependency\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{composer require -\/-\/dev phpunit/php-\/timer}
+
+\end{DoxyCode}
+\doxysection{Usage}\label{md_includes__unit_test_vendor_phpunit_php_timer__r_e_a_d_m_e_autotoc_md249}
+\doxysubsection{Basic Timing}\label{md_includes__unit_test_vendor_phpunit_php_timer__r_e_a_d_m_e_autotoc_md250}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{use SebastianBergmann\(\backslash\)Timer\(\backslash\)Timer;}
+\DoxyCodeLine{}
+\DoxyCodeLine{Timer::start();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordflow}{foreach} (\(\backslash\)range(0, 100000) as \$i) \{}
+\DoxyCodeLine{    \textcolor{comment}{// ...}}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\$time = Timer::stop();}
+\DoxyCodeLine{var\_dump(\$time);}
+\DoxyCodeLine{}
+\DoxyCodeLine{print Timer::secondsToTimeString(\$time);}
+
+\end{DoxyCode}
+
+
+The code above yields the output below\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{float(0.0023904049994599)}
+\DoxyCodeLine{2 milliseconds}
+
+\end{DoxyCode}
+\doxysubsection{Resource Consumption Since PHP Startup}\label{md_includes__unit_test_vendor_phpunit_php_timer__r_e_a_d_m_e_autotoc_md251}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{use SebastianBergmann\(\backslash\)Timer\(\backslash\)Timer;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordflow}{foreach} (\(\backslash\)range(0, 100000) as \$i) \{}
+\DoxyCodeLine{    \textcolor{comment}{// ...}}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{print Timer::resourceUsage();}
+
+\end{DoxyCode}
+
+
+The code above yields the output below\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Time: 00:00.002, Memory: 6.00 MB}
+
+\end{DoxyCode}
+ 

@@ -1,0 +1,250 @@
+
+\begin{DoxyItemize}
+\item [added] will\+Yield can now specify a return value [@camilledejoye]
+\item [added] Prophecy exception interfaces are explicitly Throwable [@ciaranmcnulty]
+\item [fixed] Argument\+::in() and not\+In() now marked as static [@tyteen4a03]
+\item [fixed] Can now double unions containing false [@ciaranmcnulty]
+\item [fixed] Virtual magic methods with arguments are now doublable in PHP 8 [@ciaranmcnulty]
+\end{DoxyItemize}\doxysection{1.\+12.\+2 / 2020/12/19}\label{md_includes__unit_test_vendor_phpspec_prophecy__c_h_a_n_g_e_s_autotoc_md62}
+
+\begin{DoxyItemize}
+\item [fixed] Method\+Not\+Found\+Exception sometimes thrown with wrong class attached [@ciaranmcnulty]
+\end{DoxyItemize}\doxysection{1.\+12.\+1 / 2020/10/29}\label{md_includes__unit_test_vendor_phpspec_prophecy__c_h_a_n_g_e_s_autotoc_md63}
+
+\begin{DoxyItemize}
+\item [fixed] Incorrect handling of inherited \textquotesingle{}self\textquotesingle{} return types [@ciaranmcnulty]
+\end{DoxyItemize}\doxysection{1.\+12.\+0 / 2020/10/28}\label{md_includes__unit_test_vendor_phpspec_prophecy__c_h_a_n_g_e_s_autotoc_md64}
+
+\begin{DoxyItemize}
+\item [added] PHP 8 support [@ciaranmcnulty]
+\item [added] Argument\+::in() and Argument\+::not\+In() [@viniciusalonso]
+\item [added] Support for union and mixed types [@ciaranmcnulty]
+\item [fixed] Issues caused by introduction of named parameters [@ciaranmcnulty]
+\item [fixed] Issues caused by stricter rounding [@ciaranmcnulty]
+\end{DoxyItemize}\doxysection{1.\+11.\+1 / 2020/07/08}\label{md_includes__unit_test_vendor_phpspec_prophecy__c_h_a_n_g_e_s_autotoc_md65}
+
+\begin{DoxyItemize}
+\item [fixed] can\textquotesingle{}t double objects with {\ttfamily self} type hints (@greg0ire)
+\item [fixed] cloned doubes were not loosely comparable (@tkulka)
+\end{DoxyItemize}\doxysection{1.\+11.\+0 / 2020/07/07}\label{md_includes__unit_test_vendor_phpspec_prophecy__c_h_a_n_g_e_s_autotoc_md66}
+
+\begin{DoxyItemize}
+\item [changed] dropped support for PHP versions earlier than 7.\+2 (@ciaranmcnulty)
+\item [fixed] removed use of Reflection APIs deprecated in PHP 8.\+0 (@\+Ayesh)
+\end{DoxyItemize}\doxysection{1.\+10.\+3 / 2020/03/05}\label{md_includes__unit_test_vendor_phpspec_prophecy__c_h_a_n_g_e_s_autotoc_md67}
+
+\begin{DoxyItemize}
+\item [fixed] removed fatal error when phpdocumentor/reflection-\/docblock 5 parses an invalid {\ttfamily @method} tag (@stof)
+\end{DoxyItemize}\doxysection{1.\+10.\+2 / 2020/01/20}\label{md_includes__unit_test_vendor_phpspec_prophecy__c_h_a_n_g_e_s_autotoc_md68}
+
+\begin{DoxyItemize}
+\item [added] support for new versions of {\ttfamily sebastian/comparator} and {\ttfamily sebastian/recursion-\/context} (@sebastianbergmann)
+\end{DoxyItemize}\doxysection{1.\+10.\+1 / 2019/12/22}\label{md_includes__unit_test_vendor_phpspec_prophecy__c_h_a_n_g_e_s_autotoc_md69}
+
+\begin{DoxyItemize}
+\item [fixed] identical callables no longer match as arguments (@ciaranmcnulty)
+\end{DoxyItemize}\doxysection{1.\+10.\+0 / 2019/12/17}\label{md_includes__unit_test_vendor_phpspec_prophecy__c_h_a_n_g_e_s_autotoc_md70}
+
+\begin{DoxyItemize}
+\item [added] should\+Have\+Been\+Called evaluation happens later so un-\/stubbed calls don\textquotesingle{}t throw (@elvetemedve)
+\item [added] methods can now be doubled case-\/insensitively to match PHP semantics (@michalbundyra)
+\item [fixed] reduced memory usage by optimising Cached\+Doubler (@\+Don\+Callisto)
+\item [fixed] removed fatal error nesting level when comparing large objects (@scroach)
+\end{DoxyItemize}\doxysection{1.\+9.\+0 / 2019/10/03}\label{md_includes__unit_test_vendor_phpspec_prophecy__c_h_a_n_g_e_s_autotoc_md71}
+
+\begin{DoxyItemize}
+\item [added] Add will\+Yield feature to Method Prophecy(@tkotosz)
+\item [fixed] Allow {\ttfamily Method\+Prophecy\+::will\+Throw()} to accept Throwable as string (@timoschinkel )
+\item [fixed] Allow new version of phpdocumentor/reflection-\/docblock (@ricpelo)
+\end{DoxyItemize}\doxysection{1.\+8.\+1 / 2019/06/13}\label{md_includes__unit_test_vendor_phpspec_prophecy__c_h_a_n_g_e_s_autotoc_md72}
+
+\begin{DoxyItemize}
+\item [fixed] Don\textquotesingle{}t try to patch final constructors (@\+NiR)
+\end{DoxyItemize}\doxysection{1.\+8.\+0 / 2018/08/05}\label{md_includes__unit_test_vendor_phpspec_prophecy__c_h_a_n_g_e_s_autotoc_md73}
+
+\begin{DoxyItemize}
+\item Support for void return types without explicit will (@crellbar)
+\item Clearer error message for unexpected method calls (@meridius)
+\item Clearer error message for aggregate exceptions (@meridius)
+\item More verbose {\ttfamily should\+Be\+Called\+Once} expectation (@olvlvl)
+\item Ability to double Throwable, or methods that extend it (@ciaranmcnulty)
+\item [fixed] Doubling methods where class has additional arguments to interface (@webimpress)
+\item [fixed] Doubling methods where arguments are nullable but default is not null (@webimpress)
+\item [fixed] Doubling magic methods on parent class (@dsnopek)
+\item [fixed] Check method predictions only once (@dontub)
+\item [fixed] Argument\+::containing\+String throwing error when called with non-\/string (@dcabrejas)
+\end{DoxyItemize}\doxysection{1.\+7.\+6 / 2018/04/18}\label{md_includes__unit_test_vendor_phpspec_prophecy__c_h_a_n_g_e_s_autotoc_md74}
+
+\begin{DoxyItemize}
+\item Allow sebastian/comparator $^\wedge$3.0 (@sebastianbergmann)
+\end{DoxyItemize}\doxysection{1.\+7.\+5 / 2018/02/11}\label{md_includes__unit_test_vendor_phpspec_prophecy__c_h_a_n_g_e_s_autotoc_md75}
+
+\begin{DoxyItemize}
+\item Support for object return type hints (thanks @greg0ire)
+\end{DoxyItemize}\doxysection{1.\+7.\+4 / 2018/02/11}\label{md_includes__unit_test_vendor_phpspec_prophecy__c_h_a_n_g_e_s_autotoc_md76}
+
+\begin{DoxyItemize}
+\item Fix issues with PHP 7.\+2 (thanks @greg0ire)
+\item Support object type hints in PHP 7.\+2 (thanks @jansvoboda11)
+\end{DoxyItemize}\doxysection{1.\+7.\+3 / 2017/11/24}\label{md_includes__unit_test_vendor_phpspec_prophecy__c_h_a_n_g_e_s_autotoc_md77}
+
+\begin{DoxyItemize}
+\item Fix Spl\+Info Class\+Patch to work with Symfony 4 (Thanks @gnugat)
+\end{DoxyItemize}\doxysection{1.\+7.\+2 / 2017-\/10-\/04}\label{md_includes__unit_test_vendor_phpspec_prophecy__c_h_a_n_g_e_s_autotoc_md78}
+
+\begin{DoxyItemize}
+\item Reverted \char`\"{}check method predictions only once\char`\"{} due to it breaking Spies
+\end{DoxyItemize}\doxysection{1.\+7.\+1 / 2017-\/10-\/03}\label{md_includes__unit_test_vendor_phpspec_prophecy__c_h_a_n_g_e_s_autotoc_md79}
+
+\begin{DoxyItemize}
+\item Allow PHP5 keywords methods generation on PHP7 (thanks @bycosta)
+\item Allow reflection-\/docblock v4 (thanks @\+Graham\+Campbell)
+\item Check method predictions only once (thanks @dontub)
+\item Escape file path sent to \textbackslash{}\+Spl\+File\+Object\+Constructor when running on Windows (thanks @danmartin-\/epiphany)
+\end{DoxyItemize}\doxysection{1.\+7.\+0 / 2017-\/03-\/02}\label{md_includes__unit_test_vendor_phpspec_prophecy__c_h_a_n_g_e_s_autotoc_md80}
+
+\begin{DoxyItemize}
+\item Add full PHP 7.\+1 Support (thanks @prolic)
+\item Allow {\ttfamily sebastian/comparator $^\wedge$2.0} (thanks @sebastianbergmann)
+\item Allow {\ttfamily sebastian/recursion-\/context $^\wedge$3.0} (thanks @sebastianbergmann)
+\item Allow {\ttfamily \textbackslash{}Error} instances in {\ttfamily Throw\+Promise} (thanks @jameshalsall)
+\item Support {\ttfamily phpspec/phpspect $^\wedge$3.2} (thanks @\+Sam-\/Burns)
+\item Fix failing builds (thanks @\+Sam-\/Burns)
+\end{DoxyItemize}\doxysection{1.\+6.\+2 / 2016-\/11-\/21}\label{md_includes__unit_test_vendor_phpspec_prophecy__c_h_a_n_g_e_s_autotoc_md81}
+
+\begin{DoxyItemize}
+\item Added support for detecting @method on interfaces that the class itself implements, or when the stubbed class is an interface itself (thanks @\+Seldaek)
+\item Added support for sebastian/recursion-\/context 2 (thanks @sebastianbergmann)
+\item Added testing on PHP 7.\+1 on Travis (thanks @danizord)
+\item Fixed the usage of the phpunit comparator (thanks @\+Anyqax)
+\end{DoxyItemize}\doxysection{1.\+6.\+1 / 2016-\/06-\/07}\label{md_includes__unit_test_vendor_phpspec_prophecy__c_h_a_n_g_e_s_autotoc_md82}
+
+\begin{DoxyItemize}
+\item Ignored empty method names in invalid {\ttfamily @method} phpdoc
+\item Fixed the mocking of Spl\+File\+Object
+\item Added compatibility with phpdocumentor/reflection-\/docblock 3
+\end{DoxyItemize}\doxysection{1.\+6.\+0 / 2016-\/02-\/15}\label{md_includes__unit_test_vendor_phpspec_prophecy__c_h_a_n_g_e_s_autotoc_md83}
+
+\begin{DoxyItemize}
+\item Add Variadics support (thanks @pamil)
+\item Add Prophecy\+Comparator for comparing objects that need revealing (thanks @jon-\/acker)
+\item Add Approximate\+Value\+Token (thanks @dantleech)
+\item Add support for \textquotesingle{}self\textquotesingle{} and \textquotesingle{}parent\textquotesingle{} return type (thanks @bendavies)
+\item Add \+\_\+\+\_\+invoke to allowed reflectable methods list (thanks @ftrrtf)
+\item Updated Export\+Util to reflect the latest changes by Sebastian (thanks @jakari)
+\item Specify the required php version for composer (thanks @jakzal)
+\item Exclude \textquotesingle{}args\textquotesingle{} in the generated backtrace (thanks @oradwell)
+\item Fix code generation for scalar parameters (thanks @trowski)
+\item Fix missing sprintf in Invalid\+Argument\+Exception \+\_\+\+\_\+construct call (thanks @emmanuelballery)
+\item Fix phpdoc for magic methods (thanks @\+Tobion)
+\item Fix Php\+Doc for interfaces usage (thanks @\+Imm\+Ranneft)
+\item Prevent final methods from being manually extended (thanks @kamioftea)
+\item Enhance exception for invalid argument to Throw\+Promise (thanks @\+Tobion)
+\end{DoxyItemize}\doxysection{1.\+5.\+0 / 2015-\/04-\/27}\label{md_includes__unit_test_vendor_phpspec_prophecy__c_h_a_n_g_e_s_autotoc_md84}
+
+\begin{DoxyItemize}
+\item Add support for PHP7 scalar type hints (thanks @trowski)
+\item Add support for PHP7 return types (thanks @trowski)
+\item Update internal test suite to support PHP7
+\end{DoxyItemize}\doxysection{1.\+4.\+1 / 2015-\/04-\/27}\label{md_includes__unit_test_vendor_phpspec_prophecy__c_h_a_n_g_e_s_autotoc_md85}
+
+\begin{DoxyItemize}
+\item Fixed bug in closure-\/based argument tokens (\#181)
+\end{DoxyItemize}\doxysection{1.\+4.\+0 / 2015-\/03-\/27}\label{md_includes__unit_test_vendor_phpspec_prophecy__c_h_a_n_g_e_s_autotoc_md86}
+
+\begin{DoxyItemize}
+\item Fixed errors in return type phpdocs (thanks @sobit)
+\item Fixed stringifying of hash containing one value (thanks @avant1)
+\item Improved clarity of method call expectation exception (thanks @dantleech)
+\item Add ability to specify which argument is returned in will\+Return\+Argument (thanks @coderbyheart)
+\item Add more information to Method\+Not\+Found exceptions (thanks @ciaranmcnulty)
+\item Support for mocking classes with methods that return references (thanks @edsonmedina)
+\item Improved object comparison (thanks @whatthejeff)
+\item Adopted \textquotesingle{}$^\wedge$\textquotesingle{} in composer dependencies (thanks @\+Graham\+Campbell)
+\item Fixed non-\/typehinted arguments being treated as optional (thanks @whatthejeff)
+\item Magic methods are now filtered for keywords (thanks @seagoj)
+\item More readable errors for failure when expecting single calls (thanks @dantleech)
+\end{DoxyItemize}\doxysection{1.\+3.\+1 / 2014-\/11-\/17}\label{md_includes__unit_test_vendor_phpspec_prophecy__c_h_a_n_g_e_s_autotoc_md87}
+
+\begin{DoxyItemize}
+\item Fix the edge case when failed predictions weren\textquotesingle{}t recorded for {\ttfamily get\+Checked\+Predictions()}
+\end{DoxyItemize}\doxysection{1.\+3.\+0 / 2014-\/11-\/14}\label{md_includes__unit_test_vendor_phpspec_prophecy__c_h_a_n_g_e_s_autotoc_md88}
+
+\begin{DoxyItemize}
+\item Add a way to get checked predictions with {\ttfamily Method\+Prophecy\+::get\+Checked\+Predictions()}
+\item Fix HHVM compatibility
+\item Remove dead code (thanks @stof)
+\item Add support for Directory\+Iterators (thanks @shanethehat)
+\end{DoxyItemize}\doxysection{1.\+2.\+0 / 2014-\/07-\/18}\label{md_includes__unit_test_vendor_phpspec_prophecy__c_h_a_n_g_e_s_autotoc_md89}
+
+\begin{DoxyItemize}
+\item Added support for doubling magic methods documented in the class phpdoc (thanks @armetiz)
+\item Fixed a segfault appearing in some cases (thanks @dmoreaulf)
+\item Fixed the doubling of methods with typehints on non-\/existent classes (thanks @gquemener)
+\item Added support for internal classes using keywords as method names (thanks @milan)
+\item Added Identical\+Value\+Token and Argument\+::is (thanks @florianv)
+\item Removed the usage of scalar typehints in HHVM as HHVM 3 does not support them anymore in PHP code (thanks @whatthejeff)
+\end{DoxyItemize}\doxysection{1.\+1.\+2 / 2014-\/01-\/24}\label{md_includes__unit_test_vendor_phpspec_prophecy__c_h_a_n_g_e_s_autotoc_md90}
+
+\begin{DoxyItemize}
+\item Spy automatically promotes spied method call to an expected one
+\end{DoxyItemize}\doxysection{1.\+1.\+1 / 2014-\/01-\/15}\label{md_includes__unit_test_vendor_phpspec_prophecy__c_h_a_n_g_e_s_autotoc_md91}
+
+\begin{DoxyItemize}
+\item Added support for HHVM
+\end{DoxyItemize}\doxysection{1.\+1.\+0 / 2014-\/01-\/01}\label{md_includes__unit_test_vendor_phpspec_prophecy__c_h_a_n_g_e_s_autotoc_md92}
+
+\begin{DoxyItemize}
+\item Changed the generated class names to use a static counter instead of a random number
+\item Added a clss patch for Reflection\+Class\+::new\+Instance to make its argument optional consistently (thanks @docteurklein)
+\item Fixed mirroring of classes with typehints on non-\/existent classes (thanks @docteurklein)
+\item Fixed the support of array callables in Callback\+Promise and Callback\+Prediction (thanks @ciaranmcnulty)
+\item Added support for properties in Object\+State\+Token (thanks @adrienbrault)
+\item Added support for mocking classes with a final constructor (thanks @ciaranmcnulty)
+\item Added Array\+Every\+Entry\+Token and Argument\+::with\+Every\+Entry() (thanks @adrienbrault)
+\item Added an exception when trying to prophesize on a final method instead of ignoring silently (thanks @docteurklein)
+\item Added String\+Contain\+Token and Argument\+::containing\+String() (thanks @peterjmit)
+\item Added {\ttfamily should\+Not\+Have\+Been\+Called} on the Method\+Prophecy (thanks @ciaranmcnulty)
+\item Fixed the comparison of objects in Exact\+Valuetoken (thanks @sstok)
+\item Deprecated {\ttfamily should\+Not\+Been\+Called} in favor of {\ttfamily should\+Not\+Have\+Been\+Called}
+\end{DoxyItemize}\doxysection{1.\+0.\+4 / 2013-\/08-\/10}\label{md_includes__unit_test_vendor_phpspec_prophecy__c_h_a_n_g_e_s_autotoc_md93}
+
+\begin{DoxyItemize}
+\item Better randomness for generated class names (thanks @sstok)
+\item Add support for interfaces into Type\+Token and Argument\+::type() (thanks @sstok)
+\item Add support for old-\/style (method name === class name) constructors (thanks @l310 for report)
+\end{DoxyItemize}\doxysection{1.\+0.\+3 / 2013-\/07-\/04}\label{md_includes__unit_test_vendor_phpspec_prophecy__c_h_a_n_g_e_s_autotoc_md94}
+
+\begin{DoxyItemize}
+\item Support callable typehints (thanks @stof)
+\item Do not attempt to autoload arrays when generating code (thanks @\+Marco\+De\+Bortoli)
+\item New Array\+Entry\+Token (thanks @kagux)
+\end{DoxyItemize}\doxysection{1.\+0.\+2 / 2013-\/05-\/19}\label{md_includes__unit_test_vendor_phpspec_prophecy__c_h_a_n_g_e_s_autotoc_md95}
+
+\begin{DoxyItemize}
+\item Logical {\ttfamily AND} token added (thanks @kagux)
+\item Logical {\ttfamily NOT} token added (thanks @kagux)
+\item Add support for setting custom constructor arguments
+\item Properly stringify hashes
+\item Record calls that throw exceptions
+\item Migrate spec suite to Php\+Spec 2.\+0
+\end{DoxyItemize}\doxysection{1.\+0.\+1 / 2013-\/04-\/30}\label{md_includes__unit_test_vendor_phpspec_prophecy__c_h_a_n_g_e_s_autotoc_md96}
+
+\begin{DoxyItemize}
+\item Fix broken Unexpected\+Call\+Exception message
+\item Trim Aggregate\+Exception message
+\end{DoxyItemize}\doxysection{1.\+0.\+0 / 2013-\/04-\/29}\label{md_includes__unit_test_vendor_phpspec_prophecy__c_h_a_n_g_e_s_autotoc_md97}
+
+\begin{DoxyItemize}
+\item Improve exception messages
+\end{DoxyItemize}\doxysection{1.\+0.\+0-\/\+BETA2 / 2013-\/04-\/03}\label{md_includes__unit_test_vendor_phpspec_prophecy__c_h_a_n_g_e_s_autotoc_md98}
+
+\begin{DoxyItemize}
+\item Add more debug information to Call\+Times and Call prediction exception messages
+\item Fix Method\+Not\+Found\+Exception wrong namespace (thanks @gunnarlium)
+\item Fix some typos in the exception messages (thanks @pborreli)
+\end{DoxyItemize}\doxysection{1.\+0.\+0-\/\+BETA1 / 2013-\/03-\/25}\label{md_includes__unit_test_vendor_phpspec_prophecy__c_h_a_n_g_e_s_autotoc_md99}
+
+\begin{DoxyItemize}
+\item Initial release 
+\end{DoxyItemize}

@@ -1,6 +1,14 @@
 <?php
+/**
+    * @brief This class takes updated representatives data.
+    */
 class UpdateRepresentatives extends Controller{
-    public static function test(){
+        /**
+    * @brief Loads all the data after View is executed
+    * @param no parameters
+    * @retval result - Data gets loaded on or from the page.
+    */
+    public static function run(){
         $repID = $_GET['mid'];
 
 

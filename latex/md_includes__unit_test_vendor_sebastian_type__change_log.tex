@@ -1,0 +1,76 @@
+All notable changes are documented in this file using the {\texttt{ Keep a CHANGELOG}} principles.\doxysection{$<$a href=\char`\"{}https\+://github.\+com/sebastianbergmann/type/compare/2.\+3.\+0...\+2.\+3.\+1\char`\"{}$>$2.\+3.\+1$<$/a$>$ -\/ 2020-\/10-\/26}\label{md_includes__unit_test_vendor_sebastian_type__change_log_autotoc_md532}
+\doxysubsection{Fixed}\label{md_includes__unit_test_vendor_sebastian_type__change_log_autotoc_md533}
+
+\begin{DoxyItemize}
+\item {\ttfamily Sebastian\+Bergmann\textbackslash{}Type\textbackslash{}Exception} now correctly extends {\ttfamily \textbackslash{}Throwable}
+\end{DoxyItemize}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/sebastianbergmann/type/compare/2.\+2.\+2...\+2.\+3.\+0\char`\"{}$>$2.\+3.\+0$<$/a$>$ -\/ 2020-\/10-\/06}\label{md_includes__unit_test_vendor_sebastian_type__change_log_autotoc_md534}
+\doxysubsection{Added}\label{md_includes__unit_test_vendor_sebastian_type__change_log_autotoc_md535}
+
+\begin{DoxyItemize}
+\item {\texttt{ \#14}}\+: Support for {\ttfamily static} return type that is introduced in PHP 8
+\end{DoxyItemize}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/sebastianbergmann/type/compare/2.\+2.\+1...\+2.\+2.\+2\char`\"{}$>$2.\+2.\+2$<$/a$>$ -\/ 2020-\/09-\/28}\label{md_includes__unit_test_vendor_sebastian_type__change_log_autotoc_md536}
+\doxysubsection{Changed}\label{md_includes__unit_test_vendor_sebastian_type__change_log_autotoc_md537}
+
+\begin{DoxyItemize}
+\item Changed PHP version constraint in {\ttfamily composer.\+json} from {\ttfamily $^\wedge$7.3 $\vert$$\vert$ $^\wedge$8.0} to {\ttfamily $>$=7.\+3}
+\end{DoxyItemize}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/sebastianbergmann/type/compare/2.\+2.\+0...\+2.\+2.\+1\char`\"{}$>$2.\+2.\+1$<$/a$>$ -\/ 2020-\/07-\/05}\label{md_includes__unit_test_vendor_sebastian_type__change_log_autotoc_md538}
+\doxysubsection{Fixed}\label{md_includes__unit_test_vendor_sebastian_type__change_log_autotoc_md539}
+
+\begin{DoxyItemize}
+\item Fixed handling of {\ttfamily mixed} type in {\ttfamily Reflection\+Mapper\+::from\+Method\+Return\+Type()}
+\end{DoxyItemize}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/sebastianbergmann/type/compare/2.\+1.\+1...\+2.\+2.\+0\char`\"{}$>$2.\+2.\+0$<$/a$>$ -\/ 2020-\/07-\/05}\label{md_includes__unit_test_vendor_sebastian_type__change_log_autotoc_md540}
+\doxysubsection{Added}\label{md_includes__unit_test_vendor_sebastian_type__change_log_autotoc_md541}
+
+\begin{DoxyItemize}
+\item Added {\ttfamily Mixed\+Type} object for representing PHP 8\textquotesingle{}s {\ttfamily mixed} type
+\end{DoxyItemize}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/sebastianbergmann/type/compare/2.\+1.\+0...\+2.\+1.\+1\char`\"{}$>$2.\+1.\+1$<$/a$>$ -\/ 2020-\/06-\/26}\label{md_includes__unit_test_vendor_sebastian_type__change_log_autotoc_md542}
+\doxysubsection{Added}\label{md_includes__unit_test_vendor_sebastian_type__change_log_autotoc_md543}
+
+\begin{DoxyItemize}
+\item This component is now supported on PHP 8
+\end{DoxyItemize}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/sebastianbergmann/type/compare/2.\+0.\+0...\+2.\+1.\+0\char`\"{}$>$2.\+1.\+0$<$/a$>$ -\/ 2020-\/06-\/01}\label{md_includes__unit_test_vendor_sebastian_type__change_log_autotoc_md544}
+\doxysubsection{Added}\label{md_includes__unit_test_vendor_sebastian_type__change_log_autotoc_md545}
+
+\begin{DoxyItemize}
+\item Added {\ttfamily Union\+Type} object for representing PHP 8\textquotesingle{}s Union Types
+\item Added {\ttfamily Reflection\+Mapper\+::from\+Method\+Return\+Type()} for mapping {\ttfamily \textbackslash{}Reflection\+Method\+::get\+Return\+Type()} to a {\ttfamily Type} object
+\item Added {\ttfamily Type\+::name()} for retrieving the name of a type
+\item Added {\ttfamily Type\+::as\+String()} for retrieving a textual representation of a type
+\end{DoxyItemize}\doxysubsection{Changed}\label{md_includes__unit_test_vendor_sebastian_type__change_log_autotoc_md546}
+
+\begin{DoxyItemize}
+\item Deprecated {\ttfamily Type\+::get\+Return\+Type\+Declaration()} (use {\ttfamily Type\+::as\+String()} instead and prefix its result with `'\+: \textquotesingle{}{\ttfamily )}
+\item {\ttfamily Deprecated}Type\+Name\+::get\+Namespace\+Name(){\ttfamily (use}Type\+Name\+::namespace\+Name(){\ttfamily instead)}
+\item {\ttfamily Deprecated}Type\+Name\+::get\+Simple\+Name(){\ttfamily (use}Type\+Name\+::simple\+Name(){\ttfamily instead)}
+\item {\ttfamily Deprecated}Type\+Name\+::get\+Qualified\+Name(){\ttfamily (use}Type\+Name\+::qualified\+Name()\`{} instead)
+\end{DoxyItemize}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/sebastianbergmann/type/compare/1.\+1.\+3...\+2.\+0.\+0\char`\"{}$>$2.\+0.\+0$<$/a$>$ -\/ 2020-\/02-\/07}\label{md_includes__unit_test_vendor_sebastian_type__change_log_autotoc_md547}
+\doxysubsection{Removed}\label{md_includes__unit_test_vendor_sebastian_type__change_log_autotoc_md548}
+
+\begin{DoxyItemize}
+\item This component is no longer supported on PHP 7.\+2
+\end{DoxyItemize}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/sebastianbergmann/type/compare/1.\+1.\+2...\+1.\+1.\+3\char`\"{}$>$1.\+1.\+3$<$/a$>$ -\/ 2019-\/07-\/02}\label{md_includes__unit_test_vendor_sebastian_type__change_log_autotoc_md549}
+\doxysubsection{Fixed}\label{md_includes__unit_test_vendor_sebastian_type__change_log_autotoc_md550}
+
+\begin{DoxyItemize}
+\item Fixed class name comparison in {\ttfamily Object\+Type} to be case-\/insensitive
+\end{DoxyItemize}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/sebastianbergmann/type/compare/1.\+1.\+1...\+1.\+1.\+2\char`\"{}$>$1.\+1.\+2$<$/a$>$ -\/ 2019-\/06-\/19}\label{md_includes__unit_test_vendor_sebastian_type__change_log_autotoc_md551}
+\doxysubsection{Fixed}\label{md_includes__unit_test_vendor_sebastian_type__change_log_autotoc_md552}
+
+\begin{DoxyItemize}
+\item Fixed handling of {\ttfamily object} type
+\end{DoxyItemize}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/sebastianbergmann/type/compare/1.\+1.\+0...\+1.\+1.\+1\char`\"{}$>$1.\+1.\+1$<$/a$>$ -\/ 2019-\/06-\/08}\label{md_includes__unit_test_vendor_sebastian_type__change_log_autotoc_md553}
+\doxysubsection{Fixed}\label{md_includes__unit_test_vendor_sebastian_type__change_log_autotoc_md554}
+
+\begin{DoxyItemize}
+\item Fixed autoloading of {\ttfamily callback\+\_\+function.\+php} fixture file
+\end{DoxyItemize}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/sebastianbergmann/type/compare/1.\+0.\+0...\+1.\+1.\+0\char`\"{}$>$1.\+1.\+0$<$/a$>$ -\/ 2019-\/06-\/07}\label{md_includes__unit_test_vendor_sebastian_type__change_log_autotoc_md555}
+\doxysubsection{Added}\label{md_includes__unit_test_vendor_sebastian_type__change_log_autotoc_md556}
+
+\begin{DoxyItemize}
+\item Added support for {\ttfamily callable} type
+\item Added support for {\ttfamily iterable} type
+\end{DoxyItemize}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/sebastianbergmann/type/compare/ff74aa41746bd8d10e931843ebf37d42da513ede...\+1.\+0.\+0\char`\"{}$>$1.\+0.\+0$<$/a$>$ -\/ 2019-\/06-\/06}\label{md_includes__unit_test_vendor_sebastian_type__change_log_autotoc_md557}
+
+\begin{DoxyItemize}
+\item Initial release based on {\texttt{ code contributed by Michel Hartmann to PHPUnit}} 
+\end{DoxyItemize}

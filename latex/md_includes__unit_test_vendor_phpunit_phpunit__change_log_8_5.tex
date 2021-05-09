@@ -1,0 +1,38 @@
+All notable changes of the PHPUnit 8.\+5 release series are documented in this file using the {\texttt{ Keep a CHANGELOG}} principles.\doxysection{$<$a href=\char`\"{}https\+://github.\+com/sebastianbergmann/phpunit/compare/8.\+5.\+2...\+8.\+5.\+3\char`\"{}$>$8.\+5.\+3$<$/a$>$ -\/ 2020-\/\+MM-\/\+DD}\label{md_includes__unit_test_vendor_phpunit_phpunit__change_log_8_5_autotoc_md281}
+\doxysubsection{Fixed}\label{md_includes__unit_test_vendor_phpunit_phpunit__change_log_8_5_autotoc_md282}
+
+\begin{DoxyItemize}
+\item Fixed {\texttt{ \#4017}}\+: Do not suggest refactoring to something that is also deprecated
+\end{DoxyItemize}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/sebastianbergmann/phpunit/compare/8.\+5.\+1...\+8.\+5.\+2\char`\"{}$>$8.\+5.\+2$<$/a$>$ -\/ 2020-\/01-\/08}\label{md_includes__unit_test_vendor_phpunit_phpunit__change_log_8_5_autotoc_md283}
+\doxysubsection{Removed}\label{md_includes__unit_test_vendor_phpunit_phpunit__change_log_8_5_autotoc_md284}
+
+\begin{DoxyItemize}
+\item {\ttfamily eval-\/stdin.\+php} has been removed, it was not used anymore since PHPUnit 7.\+2.\+7
+\end{DoxyItemize}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/sebastianbergmann/phpunit/compare/8.\+5.\+0...\+8.\+5.\+1\char`\"{}$>$8.\+5.\+1$<$/a$>$ -\/ 2019-\/12-\/25}\label{md_includes__unit_test_vendor_phpunit_phpunit__change_log_8_5_autotoc_md285}
+\doxysubsection{Changed}\label{md_includes__unit_test_vendor_phpunit_phpunit__change_log_8_5_autotoc_md286}
+
+\begin{DoxyItemize}
+\item {\ttfamily eval-\/stdin.\+php} can now only be executed with {\ttfamily cli} and {\ttfamily phpdbg}
+\end{DoxyItemize}\doxysubsection{Fixed}\label{md_includes__unit_test_vendor_phpunit_phpunit__change_log_8_5_autotoc_md287}
+
+\begin{DoxyItemize}
+\item Fixed {\texttt{ \#3983}}\+: Deprecation warning given too eagerly
+\end{DoxyItemize}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/sebastianbergmann/phpunit/compare/8.\+4.\+3...\+8.\+5.\+0\char`\"{}$>$8.\+5.\+0$<$/a$>$ -\/ 2019-\/12-\/06}\label{md_includes__unit_test_vendor_phpunit_phpunit__change_log_8_5_autotoc_md288}
+\doxysubsection{Added}\label{md_includes__unit_test_vendor_phpunit_phpunit__change_log_8_5_autotoc_md289}
+
+\begin{DoxyItemize}
+\item Implemented {\texttt{ \#3911}}\+: Support combined use of {\ttfamily add\+Methods()} and {\ttfamily only\+Methods()}
+\item Implemented {\texttt{ \#3949}}\+: Introduce specialized assertions {\ttfamily assert\+File\+Equals\+Canonicalizing()}, {\ttfamily assert\+File\+Equals\+Ignoring\+Case()}, {\ttfamily assert\+String\+Equals\+File\+Canonicalizing()}, {\ttfamily assert\+String\+Equals\+File\+Ignoring\+Case()}, {\ttfamily assert\+File\+Not\+Equals\+Canonicalizing()}, {\ttfamily assert\+File\+Not\+Equals\+Ignoring\+Case()}, {\ttfamily assert\+String\+Not\+Equals\+File\+Canonicalizing()}, and {\ttfamily assert\+String\+Not\+Equals\+File\+Ignoring\+Case()} as alternative to using {\ttfamily assert\+File\+Equals()} etc. with optional parameters
+\end{DoxyItemize}\doxysubsection{Changed}\label{md_includes__unit_test_vendor_phpunit_phpunit__change_log_8_5_autotoc_md290}
+
+\begin{DoxyItemize}
+\item Implemented {\texttt{ \#3860}}\+: Deprecate invoking PHPUnit commandline test runner with just a class name
+\item Implemented {\texttt{ \#3950}}\+: Deprecate optional parameters of {\ttfamily assert\+File\+Equals()} etc.
+\item Implemented {\texttt{ \#3955}}\+: Deprecate support for doubling multiple interfaces
+\end{DoxyItemize}\doxysubsection{Fixed}\label{md_includes__unit_test_vendor_phpunit_phpunit__change_log_8_5_autotoc_md291}
+
+\begin{DoxyItemize}
+\item Fixed {\texttt{ \#3953}}\+: Code Coverage for test executed in isolation does not work when the PHAR is used
+\item Fixed {\texttt{ \#3967}}\+: Cannot double interface that extends interface that extends {\ttfamily \textbackslash{}Throwable}
+\item Fixed {\texttt{ \#3968}}\+: \doxyref{Test}{p.}{class_test} class run in a separate PHP process are passing when {\ttfamily exit} called inside 
+\end{DoxyItemize}

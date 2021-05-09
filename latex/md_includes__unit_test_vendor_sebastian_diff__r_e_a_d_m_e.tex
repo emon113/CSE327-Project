@@ -1,0 +1,199 @@
+{\texttt{ }} {\texttt{ }}
+
+Diff implementation for PHP, factored out of PHPUnit into a stand-\/alone component.\doxysection{Installation}\label{md_includes__unit_test_vendor_sebastian_diff__r_e_a_d_m_e_autotoc_md378}
+You can add this library as a local, per-\/project dependency to your project using {\texttt{ Composer}}\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{composer require sebastian/diff}
+
+\end{DoxyCode}
+
+
+If you only need this library during development, for instance to run your project\textquotesingle{}s test suite, then you should add it as a development-\/time dependency\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{composer require -\/-\/dev sebastian/diff}
+
+\end{DoxyCode}
+\doxysubsection{Usage}\label{md_includes__unit_test_vendor_sebastian_diff__r_e_a_d_m_e_autotoc_md379}
+\doxysubsubsection{Generating diff}\label{md_includes__unit_test_vendor_sebastian_diff__r_e_a_d_m_e_autotoc_md380}
+The {\ttfamily Differ} class can be used to generate a textual representation of the difference between two strings\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{<?php}
+\DoxyCodeLine{use SebastianBergmann\(\backslash\)Diff\(\backslash\)Differ;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\$differ = \textcolor{keyword}{new} Differ;}
+\DoxyCodeLine{print \$differ-\/>diff(\textcolor{stringliteral}{'foo'}, \textcolor{stringliteral}{'bar'});}
+
+\end{DoxyCode}
+
+
+The code above yields the output below\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{-\/-\/-\/ Original}
+\DoxyCodeLine{+++ New}
+\DoxyCodeLine{@@ @@}
+\DoxyCodeLine{-\/foo}
+\DoxyCodeLine{+bar}
+
+\end{DoxyCode}
+
+
+There are three output builders available in this package\+:\doxysubsubsection{Unified\+Diff\+Output\+Builder}\label{md_includes__unit_test_vendor_sebastian_diff__r_e_a_d_m_e_autotoc_md381}
+This is default builder, which generates the output close to udiff and is used by PHPUnit.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{<?php}
+\DoxyCodeLine{}
+\DoxyCodeLine{use SebastianBergmann\(\backslash\)Diff\(\backslash\)Differ;}
+\DoxyCodeLine{use SebastianBergmann\(\backslash\)Diff\(\backslash\)Output\(\backslash\)UnifiedDiffOutputBuilder;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\$builder = \textcolor{keyword}{new} UnifiedDiffOutputBuilder(}
+\DoxyCodeLine{    \textcolor{stringliteral}{"{}-\/-\/-\/ Original\(\backslash\)n+++ New\(\backslash\)n"{}}, \textcolor{comment}{// custom header}}
+\DoxyCodeLine{    \textcolor{keyword}{false}                      \textcolor{comment}{// do not add line numbers to the diff }}
+\DoxyCodeLine{);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\$differ = \textcolor{keyword}{new} Differ(\$builder);}
+\DoxyCodeLine{print \$differ-\/>diff(\textcolor{stringliteral}{'foo'}, \textcolor{stringliteral}{'bar'});}
+
+\end{DoxyCode}
+\doxysubsubsection{Strict\+Unified\+Diff\+Output\+Builder}\label{md_includes__unit_test_vendor_sebastian_diff__r_e_a_d_m_e_autotoc_md382}
+Generates (strict) Unified diff\textquotesingle{}s (unidiffs) with hunks, similar to {\ttfamily diff -\/u} and compatible with {\ttfamily patch} and {\ttfamily git apply}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{<?php}
+\DoxyCodeLine{}
+\DoxyCodeLine{use SebastianBergmann\(\backslash\)Diff\(\backslash\)Differ;}
+\DoxyCodeLine{use SebastianBergmann\(\backslash\)Diff\(\backslash\)Output\(\backslash\)StrictUnifiedDiffOutputBuilder;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\$builder = \textcolor{keyword}{new} StrictUnifiedDiffOutputBuilder([}
+\DoxyCodeLine{    \textcolor{stringliteral}{'collapseRanges'}      => \textcolor{keyword}{true}, \textcolor{comment}{// ranges of length one are rendered with the trailing `,1`}}
+\DoxyCodeLine{    \textcolor{stringliteral}{'commonLineThreshold'} => 6,    \textcolor{comment}{// number of same lines before ending a new hunk and creating a new one (if needed)}}
+\DoxyCodeLine{    \textcolor{stringliteral}{'contextLines'}        => 3,    \textcolor{comment}{// like `diff:  -\/u, -\/U NUM, -\/-\/unified[=NUM]`, for patch/git apply compatibility best to keep at least @ 3}}
+\DoxyCodeLine{    \textcolor{stringliteral}{'fromFile'}            => \textcolor{keyword}{null},}
+\DoxyCodeLine{    \textcolor{stringliteral}{'fromFileDate'}        => \textcolor{keyword}{null},}
+\DoxyCodeLine{    \textcolor{stringliteral}{'toFile'}              => \textcolor{keyword}{null},}
+\DoxyCodeLine{    \textcolor{stringliteral}{'toFileDate'}          => \textcolor{keyword}{null},}
+\DoxyCodeLine{]);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\$differ = \textcolor{keyword}{new} Differ(\$builder);}
+\DoxyCodeLine{print \$differ-\/>diff(\textcolor{stringliteral}{'foo'}, \textcolor{stringliteral}{'bar'});}
+
+\end{DoxyCode}
+\doxysubsubsection{Diff\+Only\+Output\+Builder}\label{md_includes__unit_test_vendor_sebastian_diff__r_e_a_d_m_e_autotoc_md383}
+Output only the lines that differ.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{<?php}
+\DoxyCodeLine{}
+\DoxyCodeLine{use SebastianBergmann\(\backslash\)Diff\(\backslash\)Differ;}
+\DoxyCodeLine{use SebastianBergmann\(\backslash\)Diff\(\backslash\)Output\(\backslash\)DiffOnlyOutputBuilder;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\$builder = \textcolor{keyword}{new} DiffOnlyOutputBuilder(}
+\DoxyCodeLine{    \textcolor{stringliteral}{"{}-\/-\/-\/ Original\(\backslash\)n+++ New\(\backslash\)n"{}}}
+\DoxyCodeLine{);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\$differ = \textcolor{keyword}{new} Differ(\$builder);}
+\DoxyCodeLine{print \$differ-\/>diff(\textcolor{stringliteral}{'foo'}, \textcolor{stringliteral}{'bar'});}
+
+\end{DoxyCode}
+\doxysubsubsection{Diff\+Output\+Builder\+Interface}\label{md_includes__unit_test_vendor_sebastian_diff__r_e_a_d_m_e_autotoc_md384}
+You can pass any output builder to the {\ttfamily Differ} class as longs as it implements the {\ttfamily Diff\+Output\+Builder\+Interface}.\doxysubsubsection{Parsing diff}\label{md_includes__unit_test_vendor_sebastian_diff__r_e_a_d_m_e_autotoc_md385}
+The {\ttfamily Parser} class can be used to parse a unified diff into an object graph\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{use SebastianBergmann\(\backslash\)Diff\(\backslash\)Parser;}
+\DoxyCodeLine{use SebastianBergmann\(\backslash\)Git;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\$git = \textcolor{keyword}{new} Git(\textcolor{stringliteral}{'/usr/local/src/money'});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\$diff = \$git-\/>getDiff(}
+\DoxyCodeLine{  \textcolor{stringliteral}{'948a1a07768d8edd10dcefa8315c1cbeffb31833'},}
+\DoxyCodeLine{  \textcolor{stringliteral}{'c07a373d2399f3e686234c4f7f088d635eb9641b'}}
+\DoxyCodeLine{);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\$parser = \textcolor{keyword}{new} Parser;}
+\DoxyCodeLine{}
+\DoxyCodeLine{print\_r(\$parser-\/>parse(\$diff));}
+
+\end{DoxyCode}
+
+
+The code above yields the output below\+: \begin{DoxyVerb}Array
+(
+    [0] => SebastianBergmann\Diff\Diff Object
+        (
+            [from:SebastianBergmann\Diff\Diff:private] => a/tests/MoneyTest.php
+            [to:SebastianBergmann\Diff\Diff:private] => b/tests/MoneyTest.php
+            [chunks:SebastianBergmann\Diff\Diff:private] => Array
+                (
+                    [0] => SebastianBergmann\Diff\Chunk Object
+                        (
+                            [start:SebastianBergmann\Diff\Chunk:private] => 87
+                            [startRange:SebastianBergmann\Diff\Chunk:private] => 7
+                            [end:SebastianBergmann\Diff\Chunk:private] => 87
+                            [endRange:SebastianBergmann\Diff\Chunk:private] => 7
+                            [lines:SebastianBergmann\Diff\Chunk:private] => Array
+                                (
+                                    [0] => SebastianBergmann\Diff\Line Object
+                                        (
+                                            [type:SebastianBergmann\Diff\Line:private] => 3
+                                            [content:SebastianBergmann\Diff\Line:private] =>      * @covers SebastianBergmann\Money\Money::add
+                                        )
+
+                                    [1] => SebastianBergmann\Diff\Line Object
+                                        (
+                                            [type:SebastianBergmann\Diff\Line:private] => 3
+                                            [content:SebastianBergmann\Diff\Line:private] =>      * @covers SebastianBergmann\Money\Money::newMoney
+                                        )
+
+                                    [2] => SebastianBergmann\Diff\Line Object
+                                        (
+                                            [type:SebastianBergmann\Diff\Line:private] => 3
+                                            [content:SebastianBergmann\Diff\Line:private] =>      */
+                                        )
+
+                                    [3] => SebastianBergmann\Diff\Line Object
+                                        (
+                                            [type:SebastianBergmann\Diff\Line:private] => 2
+                                            [content:SebastianBergmann\Diff\Line:private] =>     public function testAnotherMoneyWithSameCurrencyObjectCanBeAdded()
+                                        )
+
+                                    [4] => SebastianBergmann\Diff\Line Object
+                                        (
+                                            [type:SebastianBergmann\Diff\Line:private] => 1
+                                            [content:SebastianBergmann\Diff\Line:private] =>     public function testAnotherMoneyObjectWithSameCurrencyCanBeAdded()
+                                        )
+
+                                    [5] => SebastianBergmann\Diff\Line Object
+                                        (
+                                            [type:SebastianBergmann\Diff\Line:private] => 3
+                                            [content:SebastianBergmann\Diff\Line:private] =>     {
+                                        )
+
+                                    [6] => SebastianBergmann\Diff\Line Object
+                                        (
+                                            [type:SebastianBergmann\Diff\Line:private] => 3
+                                            [content:SebastianBergmann\Diff\Line:private] =>         $a = new Money(1, new Currency('EUR'));
+                                        )
+
+                                    [7] => SebastianBergmann\Diff\Line Object
+                                        (
+                                            [type:SebastianBergmann\Diff\Line:private] => 3
+                                            [content:SebastianBergmann\Diff\Line:private] =>         $b = new Money(2, new Currency('EUR'));
+                                        )
+                                )
+                        )
+                )
+        )
+)
+\end{DoxyVerb}
+ 
