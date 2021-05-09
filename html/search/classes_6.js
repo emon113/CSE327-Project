@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['salesanalysis_57',['SalesAnalysis',['../class_sales_analysis.html',1,'']]]
+  ['salesanalysis_60',['SalesAnalysis',['../class_sales_analysis.html',1,'']]],
+  ['shortage_61',['Shortage',['../class_shortage.html',1,'']]]
 ];

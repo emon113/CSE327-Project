@@ -13,6 +13,17 @@ class CrudModel extends Database {
         $result = self::query("select rep_id,concat(first_name,' ',last_name) AS fname,representatives.phone_number,company_name from representatives");
         return $result;
     }
+
+        /**
+    * @brief This function calls the query fuction to get all the data.
+    * @param no parameters
+    * @return Array 
+    * @retval result - All the medicines that are down minimum stock
+    */
+    public static function fetchData2() {
+        $result = self::query("SELECT * from medicines where stock<stock_minimum");
+        return $result;
+    }
 /**
     * @brief This function calls the query fuction to insert all the data.
     * @param firstName - First name of the representative.

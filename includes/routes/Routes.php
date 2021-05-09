@@ -39,4 +39,10 @@ Route::set('home', function() {
   
 });
 
+Route::set('shortage', function() {
+  Shortage::createView('Shortage');
+  Shortage::run();
+  
+});
+
 ?>
