@@ -3,8 +3,8 @@
     * @brief A class that connect and help persorm query and get result from the database.
     */
 class Database {
-    public static $host = "localhost";
-    public static $dBName = "pharmacy-management-system";
+    public static $host = "127.0.0.1";
+    public static $dBName = "phr";
     public static $username = "root";
     public static $password = "";
 

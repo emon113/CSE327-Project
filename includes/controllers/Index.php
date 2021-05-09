@@ -31,13 +31,11 @@ class Index extends Controller{
         $result = $model->authentication($username); /**< result - Result retrived from database */
         $result = self::query("select emp_id, username, password, job from credentials where username = '$username' limit 1");
         $password2 =''; /**< password2 - Password start value null */
-        foreach($result as $item)
-        {
+        foreach($result as $item){
             $employeeId = $item[0]; /**< employeeId - Employee ID retrived from database */
             $password2 = $item[2]; 
         }
-        if($password2 == $password)
-        {
+        if($password2 == $password){
             header('Location: employees?eid='.$employeeId.'');
         }
         else{

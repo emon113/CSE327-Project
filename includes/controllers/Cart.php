@@ -12,8 +12,7 @@ class Cart extends Controller{
         $eid =$_GET['eid']; /**< eid - Employee ID of the user */
         $result = self::query("SELECT * FROM cart where emp_id = '$eid'");   /**< result - Result retrived from database */
         $total =0; /**< total - Total price of the medicne added by the user, initially start with 0 */
-        foreach($result as $item)
-        {
+        foreach($result as $item){
             $total = $total + $item[5];
             ?>
         <tr>

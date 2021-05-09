@@ -9,10 +9,7 @@ Route::set('employees',function(){
         Employees::employee();
 });
 
-Route::set('auth',function(){
-        //Auth::CreateView('Auth');
-        Auth::logged();
-});
+
 Route::set('sale',function(){
     Sales::CreateView('Sales');
     Sales::sale();

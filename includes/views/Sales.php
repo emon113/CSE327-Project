@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         *{
     font-family: arial;
@@ -61,24 +62,41 @@
 
 }
 
-.dashboard a {
-    text-decoration: none;
-	font-size: 25px;
-	color: white;
-	padding: 10px;
-	margin-top: 60px;
-	margin-left: 20px;
-	margin-bottom: 0px;
-    font-family: arial;
-    display: block;
-    
-}
-.dashboard a:hover {
-    color: #778DA9;
-}
-.dashboard i{
-    padding-right: 10px;
-}
+.navbar {
+         height: 100%;
+         width: 300px;
+         position: fixed;
+         z-index: 1;
+         top: 0;
+         left: 0;
+         display: flex;
+         flex-direction: column;
+         background-color: #0D1B2A;
+         overflow-y: auto;
+      }
+      .navbar a {
+         text-decoration: none;
+         font-size: 25px;
+         color: white;
+         padding: 10px;
+         margin-left: 20px;
+         height: 10vh;
+         width: 100%;
+         margin-top: 20px;
+         display: block;
+      }
+      .navbar p {
+         font-size: 25px;
+         color: white;
+         margin-bottom: 0px;
+         padding: 10px;
+         margin-top: 30px;
+         margin-left: 20px;
+         margin-bottom: 0px;
+      }
+      .navbar a:hover {
+         color: #778DA9;
+      }
 .main-page {
     margin-left: 300px;
     padding: 0x 20px;
@@ -215,19 +233,16 @@ table button {
      </div>
      </div>
 
-    <div class= 'dashboard'>
-        
-        
-        <a href="homeM.html?eid=<?= $eid; ?>"><i class="fa fa-home" aria-hidden="true"></i><span>Home</span></a>
-        <a href="medicines?eid=<?= $eid; ?>"><i class="fa fa-medkit" aria-hidden="true"></i>Medicines</a>
+     <div class="navbar">
+        <a href="home?eid=<?= $eid; ?>"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+        <a href="medicines?eid=<?= $eid; ?>"><i class="fa fa-medkit" aria-hidden="true"></i> Medicines</a>
         <a href="sale?eid=<?= $eid; ?>"><i class="fa fa-money" aria-hidden="true"></i> Sales</a>
-        <a href="shortageM.html?eid=<?= $eid; ?>"><i class="fa fa-archive" aria-hidden="true"></i><span>Shortage</span></a> 
-        <a href="update?eid=<?= $eid; ?>"><i class="fa fa-wrench" aria-hidden="true"></i><span>Update</span></a>
-        <a href="employees?eid=<?= $eid; ?>"><i class="fa fa-pencil" aria-hidden="true"></i> Employees</a>
-        <a href="companyM.html?eid=<?= $eid; ?>"><i class="fa fa-building" aria-hidden="true"></i> Companies</a>
-        <a href="representativesM.html?eid=<?= $eid; ?>"><i class="fa fa-users" aria-hidden="true"></i> Representatives</a>
-        <a href="login"><i class="fa fa-arrow-left" aria-hidden="true"></i><span>Log Out</span></a>
-             
+        <a href="shortage?eid=<?= $eid; ?>"><i class="fa fa-archive" aria-hidden="true"></i> Shortage</a>
+        <a href="update?eid=<?= $eid; ?>"><i class="fa fa-pencil" aria-hidden="true"></i> Update</a>
+        <a href="employees?eid=<?= $eid; ?>"><i class="fa fa-users" aria-hidden="true"></i> Employees</a>
+        <a href="companies?eid=<?= $eid; ?>"><i class="fa fa-building" aria-hidden="true"></i> Companies</a>
+        <a href="representatives?eid=<?= $eid; ?>"><i class="fa fa-users" aria-hidden="true"></i> Representatives</a>
+        <a href="Index.php"><i class="fa fa-sign-out" aria-hidden="true"></i> Log Out</a>
     </div>
  
     <div id="MyClockDisplay" class="datetime" onload="showTime()"></div>

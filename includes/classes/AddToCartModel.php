@@ -18,8 +18,7 @@ class AddToCartModel extends Database {
     * @param  medicineId - Id of a specific medicine to find that from database.
     * @return Medicine name and retail price of a meidicne.
     */
-    public static function medicineDetails($medicineId)
-    {
+    public static function medicineDetails($medicineId){
         return self::query("SELECT medicine_name, retail_price from medicines where medicine_id = '$medicineId'");
     }
     /**
@@ -32,8 +31,7 @@ class AddToCartModel extends Database {
     * @param subTotal - Total price of a specific medicine for a specific quantity.
     * @return INSERT a meidicne with it's relevent information,  quantity and who sold it to the cart into the database.
     */
-    public static function insertIntoCart($medicineId,$medicineName, $price, $employeeId, $quantity, $subtotal)
-    {
+    public static function insertIntoCart($medicineId,$medicineName, $price, $employeeId, $quantity, $subtotal){
         self::query("INSERT INTO cart VALUES ('$medicineId', '$medicineName','$price','$employeeId','$quantity','$subtotal')");
     }
     /**
@@ -41,8 +39,7 @@ class AddToCartModel extends Database {
     * @param  medicineId - Id of a specific medicine's stock to find that from database.
     * @return Stock of that meidicne.
     */
-    public static function findStock($medicineId)
-    {
+    public static function findStock($medicineId){
         return self::query("SELECT stock FROM medicines where medicine_id = '$medicineId'");
     }
     /**
@@ -51,8 +48,7 @@ class AddToCartModel extends Database {
     * @param employeeId - Id of the employee who added the medicine into the cart.
     * @return Return all information of that medicine from the cart table if that's available.
     */
-    public static function isAdded($medicineId, $employeeId)
-    {
+    public static function isAdded($medicineId, $employeeId){
         return self::query("SELECT * FROM cart where medicine_id = '$medicineId' and emp_id = '$employeeId'");
     }
     /**
@@ -61,8 +57,7 @@ class AddToCartModel extends Database {
     * @param employeeId - Id of the employee who added the medicine into the cart.
     * @return Return quantity of that medicine from the cart table if that's available.
     */
-    public static function findQuantity($medicineId,$employeeId)
-    {
+    public static function findQuantity($medicineId,$employeeId){
         return self::query("SELECT quantity FROM cart where medicine_id = '$medicineId' and emp_id = '$employeeId'");
     }  
     /**

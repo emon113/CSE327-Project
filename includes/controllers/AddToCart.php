@@ -89,12 +89,10 @@ class AddToCart extends Controller{
     * @param employeeId - To find the cart of that specific employee.
     * @return Will Return true if that medicine is already added or flase otherwise.
     */
-    public static function isAlreadyAdded($medicineId, $employeeId)
-    {
+    public static function isAlreadyAdded($medicineId, $employeeId){
         $model = new AddToCartModel(); /**< model - An object of AddToCart Class */
         $result = $model->isAdded($medicineId, $employeeId); /**< result - Result retrived from database */
-        if(!empty($result))
-        {
+        if(!empty($result)){
             return true;
         }
         else {
@@ -108,12 +106,10 @@ class AddToCart extends Controller{
     * @param employeeId - To find the cart of that specific employee.
     * @return Will Return new quantity after adding the same medicine to the cart.
     */
-    public static function newQuantity($quantity, $medicineId,$employeeId)
-    {
+    public static function newQuantity($quantity, $medicineId,$employeeId){
         $model = new AddToCartModel(); /**< model - An object of AddToCart Class */
         $result = $model->findQuantity($medicineId,$employeeId); /**< result - Result retrived from database */
-        foreach($result as $item)
-        {
+        foreach($result as $item){
             $stock = $item[0];
         }
         return $quantity + $stock;
