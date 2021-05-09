@@ -233,9 +233,8 @@
 				var yyyy = today.getFullYear();
 
 				today = mm + '/' + dd + '/' + yyyy;
-
-
 				var time = h + ":" + m + ":" + s + " " + session;
+				
 				document.getElementById("MyClockDisplay").innerText = today + time;
 				document.getElementById("MyClockDisplay").textContent = today + ' ' + time;
 				setTimeout(showTime, 1000);

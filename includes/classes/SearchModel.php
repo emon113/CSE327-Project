@@ -1,7 +1,7 @@
 <?php
 
 /**
-* @brief Model for Search Functionality
+* @brief Model class for Search Functionality
 */
 class SearchModel extends Database {
     

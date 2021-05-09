@@ -1,12 +1,12 @@
 <?php
 
 /**
-* @brief Model for Checkout Functionality
+* @brief Model class for Checkout Functionality
 */
 class CheckoutModel extends Database {
     
     /**
-    * @brief Queries the database and updates the tables
+    * @brief Queries the database and updates the tables after checkout
     * @brief Inserts the checkout data into orders table
     * @brief Inserts the checkout data into orderitem table
     * @brief Updates the stock in the medicines table

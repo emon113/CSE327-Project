@@ -33,7 +33,7 @@ class Medicines extends Controller {
                 <td><?php echo $item[7]; ?></td>
                 <td><?php echo $item[9]; ?></td>
             </tr>
-<?php }
+<?php   }
     }
 
     /**

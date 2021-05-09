@@ -27,7 +27,7 @@ class Checkout extends Controller {
      * @brief Checks whether the customer phone number is valid or not
      * @param customerPhone - Phone number of the customer 
      * @retval true - Customer phone number is valid
-     * @retval false - Customer phone number  is invalid
+     * @retval false - Customer phone number is invalid
      */
     public static function isValidPhone($customerPhone) {
         if ($customerPhone == NULL) {
@@ -44,7 +44,7 @@ class Checkout extends Controller {
      * @brief Checks whether the selected payment method is valid or not
      * @param paymentMethod - Payment method selected by the customer 
      * @retval true - Payment method is valid, i.e, Cash/Card
-     * @retval false - Customer phone number  is invalid
+     * @retval false - Payment method is invalid
      */
     public static function isValidPayment($paymentMethod) {
         if ($paymentMethod == NULL) {
@@ -82,12 +82,12 @@ class Checkout extends Controller {
                 <td><?php echo $item[2]; ?></td>
                 <td><?php echo $item[5]; ?></td>
             </tr>
-<?php }
+<?php   }
     }
     /**
      * @brief Loads the inital checkout page
      * @brief Prints all the items added in cart
-     * @brief Grabs user input from the view
+     * @brief Grabs user input from the view (if any)
      */
     public static function onPageLoad() {
         $tableName = 'cart';

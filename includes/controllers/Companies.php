@@ -10,7 +10,6 @@ class Companies extends Controller {
     * @brief Searches the companies and displays the result
     * @param query - The keyword to search 
     */
-
     public static function searchCompanies($query) {
         $searchModel = new SearchModel();
         $result = $searchModel->searchItems('company', $query, 'company_name');
@@ -30,7 +29,7 @@ class Companies extends Controller {
                 <td><?php echo $item[3]; ?></td>
                 <td><?php echo $item[4]; ?></td>
             </tr>
-<?php }
+<?php   }
     }
 
     /**

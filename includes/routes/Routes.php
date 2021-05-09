@@ -1,8 +1,5 @@
 <?php
 
-Route::set('index', function() {
-    Index::CreateView('Index');
-});
 
 Route::set('medicines', function() {
     Medicines::CreateView('Medicines');
