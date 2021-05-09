@@ -47,6 +47,7 @@ class CheckoutTest extends TestCase {
      * @retval true - Payment method is valid, i.e, Cash/Card
      * @retval false - Customer phone number  is invalid
      */
+    
     public static function isValidPayment($paymentMethod) {
         if ($paymentMethod == NULL) {
             return false;
@@ -57,27 +58,25 @@ class CheckoutTest extends TestCase {
             return false;
         }
     }
+
     public function test_isValidName_ValidName_True() {
         $this->assertEquals(
             true,
             CheckoutTest::isValidName('Shihabur Rahman Samrat')
         );
     }
-
     public function test_isValidName_EmptyName_False() {
         $this->assertEquals(
             false,
             CheckoutTest::isValidName('')
         );
     }
-
     public function test_isValidName_NameWithSymbols_False() {
         $this->assertEquals(
             false,
             CheckoutTest::isValidName('%%%&Shiahbur Rahman..')
         );
     }
-
     public function test_isValidName_NameWithNumbers_False() {
         $this->assertEquals(
             false,
@@ -91,7 +90,6 @@ class CheckoutTest extends TestCase {
             CheckoutTest::isValidPhone('01743795642')
         );
     }
-
     public function test_isValidPhone_PhoneNotNumeric_False(){
         $this->assertEquals(
             false,
@@ -111,7 +109,6 @@ class CheckoutTest extends TestCase {
             CheckoutTest::isValidPayment('Card')
         );
     }
-
     public function test_isValidPayment_CashPayment_True() {
         $this->assertEquals(
             true,

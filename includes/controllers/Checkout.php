@@ -4,8 +4,7 @@
 * @brief Controller for the Checkout page
 */
 
-class Checkout extends Controller
-{
+class Checkout extends Controller {
 
     /** 
      * @brief Checks whether the customer name is valid or not

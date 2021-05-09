@@ -35,7 +35,7 @@ class Companies extends Controller {
 
     /**
     * @brief Loads the inital companies page
-    * Prints all the companies
+    * @brief Prints all the companies
     * @brief Grabs user input from the view (if any)
     */
     public static function onPageLoad() {
