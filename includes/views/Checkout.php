@@ -32,10 +32,11 @@
             font-size: 25px;
             color: white;
             padding: 10px;
-            margin-top: 30px;
             margin-left: 20px;
-            margin-bottom: 0px;
-
+            height: 10vh;
+            width: 100%;
+            margin-top: 20px;
+            display: block;
         }
 
         .navbar p {
@@ -86,7 +87,7 @@
             border: none;
             padding: 2px;
         }
-
+        
         .form {
             margin-top: 25px;
             margin-left: 350px;
@@ -122,14 +123,15 @@
 
 <body>
     <div class="navbar">
-        <a href="homeM.html?eid=<?= $eid; ?>"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
-        <a href="medicinesM.html?eid=<?= $eid; ?>"><i class="fa fa-medkit" aria-hidden="true"></i> Medicines</a>
-        <a href="salesM.html?eid=<?= $eid; ?>"><i class="fa fa-money" aria-hidden="true"></i> Sales</a>
-        <a href="shortageM.html?eid=<?= $eid; ?>"><i class="fa fa-archive" aria-hidden="true"></i> Shortage</a>
-        <a href="updateM.html?eid=<?= $eid; ?>"><i class="fa fa-pencil" aria-hidden="true"></i> Update</a>
-        <a href="companyM.html?eid=<?= $eid; ?>"><i class="fa fa-building" aria-hidden="true"></i> Companies</a>
-        <a href="#"><i class="fa fa-users" aria-hidden="true"></i> Representatives</a>
-        <a href="Login.html?eid=<?= $eid; ?>"><i class="fa fa-sign-out" aria-hidden="true"></i> Log Out</a>
+        <a href="home?eid=<?= $eid; ?>"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+        <a href="medicines?eid=<?= $eid; ?>"><i class="fa fa-medkit" aria-hidden="true"></i> Medicines</a>
+        <a href="sale?eid=<?= $eid; ?>"><i class="fa fa-money" aria-hidden="true"></i> Sales</a>
+        <a href="shortage?eid=<?= $eid; ?>"><i class="fa fa-archive" aria-hidden="true"></i> Shortage</a>
+        <a href="update?eid=<?= $eid; ?>"><i class="fa fa-pencil" aria-hidden="true"></i> Update</a>
+        <a href="employees?eid=<?= $eid; ?>"><i class="fa fa-users" aria-hidden="true"></i> Employees</a>
+        <a href="companies?eid=<?= $eid; ?>"><i class="fa fa-building" aria-hidden="true"></i> Companies</a>
+        <a href="representatives?eid=<?= $eid; ?>"><i class="fa fa-users" aria-hidden="true"></i> Representatives</a>
+        <a href="Index.php"><i class="fa fa-sign-out" aria-hidden="true"></i> Log Out</a>
     </div>
 
     <div class="form">
